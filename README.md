@@ -1,0 +1,130 @@
+# Meridian — a TF2 HUD for Linux at 16:10
+
+A flat, low-clutter HUD for Team Fortress 2, laid out for 16:10 displays
+(1280×800, 1440×900, 1680×1050, 1920×1200, 2560×1600) and installed with one
+Linux-friendly script.
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                                                  kill feed (top-right)
+│                                                                  │
+│                                                                  │
+│ chat                          ┌ target ID ┐                      │
+│                               └───────────┘                      │
+│ spy disguise                                      ┌ uber / metal ┐
+│ status icons                                      └──────────────┘
+│ ┌ class │ 125 / 125 ┐              ┌ item ┐        ┌ 6    32  ┐ │
+│ └───────────────────┘              └──────┘        └──ammo────┘ │
+└──────────────────────────────────────────────────────────────────┘
+   health dock (bottom-left)                    ammo dock (bottom-right)
+```
+
+Everything sits 20 HUD units in from the screen edges, and all docks share one
+baseline (y = 412–460 of 480).
+
+## Install
+
+```sh
+./install.sh --autoexec
+```
+
+This finds TF2 (native Steam, Flatpak, Snap, and extra library folders), copies
+`meridian/` to `tf/custom/meridian`, and adds `exec meridian` to
+`tf/cfg/autoexec.cfg`. Restart TF2.
+
+| Option | Effect |
+| --- | --- |
+| `--link` | symlink instead of copy; edit in place and run `hud_reloadscheme` in the console |
+| `--tf-dir DIR` / `TF2_DIR=DIR` | use a specific `…/Team Fortress 2/tf` |
+| `--uninstall` | remove the HUD and the autoexec line |
+
+Recommended launch options for a 16:10 panel: `-novid -w 1920 -h 1200 -fullscreen`.
+
+Manual install: copy the `meridian/` folder to
+`~/.steam/steam/steamapps/common/Team Fortress 2/tf/custom/` and run
+`exec meridian` once.
+
+### Why `exec meridian`
+
+`meridian/cfg/meridian.cfg` sets `cl_hud_playerclass_use_playermodel 0`. The
+health dock shows the 2D class icon; with the stock setting (`1`) TF2 draws the
+3D model instead and the icon cell stays empty. It also sets `cl_hud_minmode 0`.
+
+## What is restyled
+
+| Element | File |
+| --- | --- |
+| Health, overheal / low-health underline, status icons | `resource/ui/hudplayerhealth.res` |
+| Class icon (3D model panel collapsed) | `resource/ui/hudplayerclass.res` |
+| Ammo | `resource/ui/hudammoweapons.res` |
+| Ubercharge / Vaccinator charges | `resource/ui/hudmediccharge.res` |
+| Engineer metal | `resource/ui/hudaccountpanel.res` |
+| Generic item meter (Sandman, Sandvich, Jarate, …) | `resource/ui/huditemeffectmeter.res` |
+| Target ID (team-tinted) | `resource/ui/targetid.res` |
+| Floating +health / damage numbers | `hudhealthaccount.res`, `huddamageaccount.res` |
+| Positions of all of the above, chat, kill feed, weapon selection | `scripts/hudlayout.res` |
+| Fonts, progress-bar colours | `resource/clientscheme.res` |
+| Ubercharge-ready flash, Spy disguise flash | `scripts/hudanimations_tf.txt` |
+
+Fonts are [Barlow and Barlow Condensed](https://fonts.google.com/specimen/Barlow)
+(SIL OFL, licence in `resource/fonts/ofl.txt`), shipped inside the HUD so nothing
+depends on system fonts. Sizes are defined per 16:10 resolution band, so text
+scales with the layout.
+
+### Left as stock
+
+The remaining HUD files keep the default look: scoreboard, round timer and match
+status, control point icons, win panel, building status, the 17 class-specific item
+meters (moved into the bottom row, but still stock art), Demoman stickies, menus,
+and MvM. Add restyled copies to `meridian/resource/ui/` to override any of them.
+
+## 16:10 notes
+
+TF2 scales HUD coordinates by screen *height* (480 units tall), so at 16:10 the
+screen is 768×480 units. Right/bottom anchoring (`r140`, `r68`) and centring
+(`c-116`) keep the docks pinned to the real edges at any 16:10 resolution. Other
+aspect ratios work (the docks stay in the corners), but only 16:10 has been laid
+out and checked for overlaps.
+
+## Linux notes
+
+* All file names are lowercase. The Linux client lower-cases lookups, so a
+  `HudAmmoWeapons.res` would be silently ignored. `install.sh` refuses to install
+  mixed-case names and `tools/check.py` flags them.
+* Fonts are loaded from `resource/fonts/` via `CustomFontFiles` — no
+  fontconfig setup needed.
+
+## Developing
+
+```sh
+python3 tools/check.py          # syntax, fonts, materials, VTF headers, lowercase names
+python3 tools/gen_textures.py   # rebuild materials/hud/*.vtf|vmt (palette lives in the script)
+python3 tools/gen_fonts.py      # print the font block used in clientscheme.res
+```
+
+The lightly-modified files are derived from the stock HUD by scripts, so they can
+be rebuilt when Valve updates the game. Get stock files from
+[JarateKing/TF2-Hud-Reference](https://github.com/JarateKing/TF2-Hud-Reference)
+(`reference/`, MIT) or extract them from `tf2_misc_dir.vpk`, then:
+
+```sh
+python3 tools/patch_layout.py STOCK/scripts/hudlayout.res        meridian/scripts/hudlayout.res
+python3 tools/patch_anims.py  STOCK/scripts/hudanimations_tf.txt meridian/scripts/hudanimations_tf.txt
+python3 tools/patch_ui.py     STOCK/resource/ui                  meridian/resource/ui
+```
+
+Each patch must match exactly once and aborts otherwise, so a stock-file change
+fails loudly instead of producing a half-patched HUD. `clientscheme.res` is the
+stock scheme plus the Meridian block (see the `Meridian` markers) and two
+progress-bar colour lines.
+
+## Known limits
+
+* **Not yet tested in the game.** It was built and statically checked on a machine
+  without TF2. Expect to nudge a few numbers on first launch; with `--link` and
+  `hud_reloadscheme` that is a quick loop. Please report anything that looks off.
+* **Health is a number, not a bar.** TF2 fills its health graphic from a fixed
+  class image, which can't be reshaped into a horizontal bar. Overheal and low
+  health use a growing/pulsing underline instead (red when low; overheal
+  should pulse white, which I couldn't confirm without the game).
+* The Vaccinator resist icon and some status icons use stock icon art.
