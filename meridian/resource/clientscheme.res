@@ -6177,6 +6177,42 @@ Scheme
 				}
 			}
 		}
+		MerButtonBorder
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "150 160 172 255"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "150 160 172 255"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		MerButtonBorderArmed
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "236 240 244 255"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "236 240 244 255"
+					"offset" "0 0"
+				}
+			}
+		}
+
 	}
 
 	//////////////////////// CUSTOM FONT FILES /////////////////////////////

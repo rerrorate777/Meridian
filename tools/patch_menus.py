@@ -44,6 +44,11 @@ BORDERS = {
 
 # 1px outline borders (not images): TanDark became a light grey, which is too bright for an outline
 OUTLINE_BORDERS = ("QuickplayBorder", "SortCategoryBorder")
+
+# new borders for the footer buttons: a 2px accent line on the left (brighter when armed)
+ACCENT = "150 160 172 255"
+ACCENT_ARMED = "236 240 244 255"
+NEW_BORDERS = {"MerButtonBorder": ACCENT, "MerButtonBorderArmed": ACCENT_ARMED}
 OUTLINE = "60 68 82 255"
 
 # the tan palette
@@ -120,6 +125,17 @@ def patch_scheme(path):
         if not m:
             raise SystemExit("scheme border not found: " + name)
         b = b[:m.start()] + m.group(0).replace('"TanDark"', '"%s"' % OUTLINE) + b[m.end():]
+    for name, color in NEW_BORDERS.items():
+        blk = ('\n\t\t%s\n\t\t{\n\t\t\t"inset" "0 0 0 0"\n\t\t\tLeft\n\t\t\t{\n'
+               '\t\t\t\t"1"\n\t\t\t\t{\n\t\t\t\t\t"color" "%s"\n\t\t\t\t\t"offset" "0 0"\n\t\t\t\t}\n'
+               '\t\t\t\t"2"\n\t\t\t\t{\n\t\t\t\t\t"color" "%s"\n\t\t\t\t\t"offset" "0 0"\n\t\t\t\t}\n'
+               '\t\t\t}\n\t\t}\n' % (name, color, color))
+        m = re.search(r'\n\t\t%s\s*\n\t\t\{.*?\n\t\t\}\n' % name, b, re.S)
+        if m:  # re-run: replace the block
+            b = b[:m.start()] + blk + b[m.end():]
+        else:  # first run: append at the end of the Borders section (before its closing brace)
+            k = b.rindex("\n\t}")
+            b = b[:k] + blk + b[k:]
     t = t[:i] + b + t[j:]
     # BaseSettings colours
     for name, value in BASE.items():
@@ -169,6 +185,37 @@ def patch_mainmenu(src, dst):
     t = read(src)
     t = edit_block(t, "BackgroundFooter", flat_fill("10 12 16 245"))
     t = edit_block(t, "FooterLine", flat_fill("46 52 64 255"))
+    # Footer buttons: square, flat, left accent line. The nine icon buttons at the bottom right were packed
+    # at a 25 unit pitch so they read as one bar; give each its own 30 unit button with a gap.
+    strip = ["SettingsButton", "TF2SettingsButton", "NewUserForumsButton", "AchievementsButton",
+             "CommentaryButton", "CoachPlayersButton", "WorkshopButton", "ReplayButton", "ReportBugButton"]
+    pitch, first = 36, -29
+
+    def style(b):
+        for k, v in (("border_default", "MerButtonBorder"), ("border_armed", "MerButtonBorderArmed"),
+                     ("paintborder", "1"), ("PaintBackgroundType", "0")):
+            b = setk(b, k, v)
+        return b
+
+    for i, n in enumerate(strip):
+        def place(b, i=i):
+            b = style(b)
+            b = setk(b, "xpos", "c%d" % (first + pitch * i))
+            b = setk(b, "wide", "30")
+            # centre the glyph (SubImage) in the 30 x 25 button
+            m = re.search(r'\n\t\t"SubImage"\s*\n\t\t\{.*?\n\t\t\}', b, re.S)
+            if not m:
+                raise SystemExit(n + ": no SubImage")
+            sb = m.group(0)
+            w = int(re.search(r'\n\t\t\t"wide"\s*"(\d+)"', sb).group(1))
+            h = int(re.search(r'\n\t\t\t"tall"\s*"(\d+)"', sb).group(1))
+            sb = sub1(r'(\n\t\t\t"xpos"\s*)"[^"]*"', r'\g<1>"%d"' % ((30 - w) // 2), sb, n + ".SubImage.xpos")
+            sb = sub1(r'(\n\t\t\t"ypos"\s*)"[^"]*"', r'\g<1>"%d"' % ((25 - h) // 2), sb, n + ".SubImage.ypos")
+            return b[:m.start()] + sb + b[m.end():]
+        t = edit_block(t, n, place)
+    for n in ("CharacterSetupButton", "GeneralStoreButton"):
+        t = edit_block(t, n, style)
+
     # The "Featured" store item panel is gone; the friends list moves up into its place
     t = edit_block(t, "EventPromo", hide_panel)
     t = edit_block(t, "FriendsContainer", lambda b: setk(setk(b, "ypos", "160"), "tall", "250"))

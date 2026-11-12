@@ -2339,6 +2339,10 @@
 			"scaleImage"	"1"
 			"image"			"glyph_items"
 		}		
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}
 
 	"StoreHasNewItemsImage"
@@ -2401,6 +2405,10 @@
 			"scaleImage"	"1"
 			"image" "glyph_store"
 		}		
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}
 
 	"SettingsButtonSDK"
@@ -2504,7 +2512,7 @@
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"SettingsButton"
-		"xpos"			"c-208+273"
+		"xpos"			"c-29"
 		"ypos"			"437"
 		"zpos"			"1"
 		"wide"			"30"
@@ -2536,8 +2544,8 @@
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"6"
-			"ypos"			"6"
+			"xpos"			"8"
+			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"14"
 			"tall"			"14"
@@ -2546,16 +2554,20 @@
 			"scaleImage"	"1"
 			"image"			"glyph_options"
 		}			
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}
 
 	"TF2SettingsButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"TF2SettingsButton"
-		"xpos"			"c-183+273"
+		"xpos"			"c7"
 		"ypos"			"437"
 		"zpos"			"2"
-		"wide"			"26"
+		"wide"			"30"
 		"tall"			"25"
 		"autoResize"	"0"
 		"pinCorner"		"3"
@@ -2576,15 +2588,15 @@
 
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"6"
-			"ypos"			"6"
+			"xpos"			"8"
+			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"14"
 			"tall"			"14"
@@ -2594,13 +2606,16 @@
 			"image"			"glyph_options"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}
 	
 	"NewUserForumsButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"NewUserForumsButton"
-		"xpos"			"c-158+273"
+		"xpos"			"c43"
 		"ypos"			"437"
 		"zpos"			"2"
 		"wide"			"30"
@@ -2625,15 +2640,15 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"PaintBackgroundType" "0"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"4"
-			"ypos"			"4"
+			"xpos"			"6"
+			"ypos"			"3"
 			"zpos"			"1"
 			"wide"			"18"
 			"tall"			"18"
@@ -2642,13 +2657,15 @@
 			"image"			"glyph_tutorial"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
 	}		
 	
 	"AchievementsButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"AchievementsButton"
-		"xpos"			"c-133+273"
+		"xpos"			"c79"
 		"ypos"			"437"
 		"zpos"			"3"
 		"wide"			"30"
@@ -2672,15 +2689,15 @@
 
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"6"
+			"xpos"			"7"
+			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"15"
 			"tall"			"15"
@@ -2689,13 +2706,16 @@
 			"image"			"glyph_achievements"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}		
 	
 	"CommentaryButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"CommentaryButton"
-		"xpos"			"c-108+273"
+		"xpos"			"c115"
 		"ypos"			"437"
 		"zpos"			"4"
 		"wide"			"30"
@@ -2719,15 +2739,15 @@
 
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"6"
+			"xpos"			"7"
+			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"15"
 			"tall"			"15"
@@ -2736,16 +2756,19 @@
 			"image"			"glyph_forums"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}		
 	
 	"CoachPlayersButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"CoachPlayersButton"
-		"xpos"			"c-83+273"
+		"xpos"			"c151"
 		"ypos"			"437"
 		"zpos"			"5"
-		"wide"			"25"
+		"wide"			"30"
 		"tall"			"25"
 		"autoResize"	"0"
 		"pinCorner"		"3"
@@ -2766,14 +2789,14 @@
 
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"5"
+			"xpos"			"7"
 			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"15"
@@ -2783,13 +2806,16 @@
 			"image"			"glyph_commentary"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}		
 
 	"WorkshopButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"WorkshopButton"
-		"xpos"			"c-63+273"
+		"xpos"			"c187"
 		"ypos"			"437"
 		"zpos"			"4"
 		"wide"			"30"
@@ -2813,15 +2839,15 @@
 
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"9"
-			"ypos"			"6"
+			"xpos"			"7"
+			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"15"
 			"tall"			"15"
@@ -2830,16 +2856,19 @@
 			"image"			"glyph_steamworkshop"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}	
 
 	"ReplayButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"ReplayButton"
-		"xpos"			"c-34+273"
+		"xpos"			"c223"
 		"ypos"			"437"
 		"zpos"			"5"
-		"wide"			"25"
+		"wide"			"30"
 		"tall"			"25"
 		"autoResize"	"0"
 		"pinCorner"		"3"
@@ -2860,14 +2889,14 @@
 
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	"MainMenuSubButtonBorder"
+		"border_default"	"MerButtonBorder"
 		
 		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"5"
+			"xpos"			"7"
 			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"15"
@@ -2877,13 +2906,16 @@
 			"image"			"glyph_tv"
 			"scaleImage"	"1"
 		}				
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}
 	
 	"ReportBugButton"
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"ReportBugButton"
-		"xpos"			"c-14+273"
+		"xpos"			"c259"
 		"ypos"			"437"
 		"zpos"			"4"
 		"wide"			"30"
@@ -2913,7 +2945,7 @@
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"SubImage"
-			"xpos"			"10"
+			"xpos"			"7"
 			"ypos"			"5"
 			"zpos"			"1"
 			"wide"			"15"
@@ -2923,6 +2955,10 @@
 			"image"			"glyph_bug"
 			"scaleImage"	"1"
 		}				
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 	}			
 				
 	
