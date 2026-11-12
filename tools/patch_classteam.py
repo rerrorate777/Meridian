@@ -24,6 +24,11 @@ SCRIM = "8 10 14 225"
 BAR = "12 14 18 235"
 CARD = "12 14 18 225"
 CARD_RANDOM = "34 38 48 235"
+BTN = "28 32 40 235"
+BTN_ARMED = "46 52 64 235"
+BTN_PRESSED = "60 68 82 235"
+CANCEL_TEXT = "224 84 72 255"
+CANCEL_TEXT_ARMED = "255 130 118 255"
 HOVER = "255 255 255 7"  # translucent white renders ~3x stronger than its alpha suggests
 PRESS = "255 255 255 16"
 CARD_BLUE = "28 58 92 225"
@@ -105,6 +110,22 @@ def label(x, y, w, h, font, color=TEXT, align="center", **extra):
     return fn
 
 
+def flat_button(cancel=False):
+    """Footer button: flat dark fill (lighter on hover/press) in the Meridian font, no stock border."""
+    def fn(b):
+        kw = dict(paintbackground="1", paintborder="0", font="MerBody",
+                  border_default="NoBorder", border_armed="NoBorder", border_depressed="NoBorder",
+                  defaultBgColor_override=BTN, armedBgColor_override=BTN_ARMED,
+                  depressedBgColor_override=BTN_PRESSED,
+                  defaultFgColor_override=CANCEL_TEXT if cancel else TEXT,
+                  armedFgColor_override=CANCEL_TEXT_ARMED if cancel else "255 255 255 255",
+                  depressedFgColor_override=CANCEL_TEXT_ARMED if cancel else "255 255 255 255")
+        for k, v in kw.items():
+            b = setk(b, k, v)
+        return re.sub(r'\n\t\t"fgcolor_override"[^\n]*', "", b)  # stock red text colour -> the override above
+    return fn
+
+
 def hide_model(b):
     """A CModelPanel scene piece -> a 1x1 panel off screen (still found by name, draws nothing)."""
     b = strip_variants(b)
@@ -172,6 +193,7 @@ def patch_teammenu(src, dst):
     t = edit_block(t, "TeamMenuSpectate", label(c(X_BLUE), str(CARD_Y + CARD_H + 20), str(CARD_W), "32", "MerBody", zpos="5"))
     t = edit_block(t, "BlueCount", label(c(X_BLUE), "238", str(CARD_W), "40", "MerNumberMed", zpos="5"))
     t = edit_block(t, "RedCount", label(c(X_RED), "238", str(CARD_W), "40", "MerNumberMed", zpos="5"))
+    t = edit_block(t, "CancelButton", flat_button(cancel=True))
     t = edit_block(t, "TeamMenuSelect", label("30", "r40", "450", "30", "MerTitle", align="west"))
     for n, x in (("HighlanderLabel", -150), ("HighlanderLabelShadow", -149)):
         t = edit_block(t, n, label(c(x + 40), "62", "220", "24", "MerBody", "0 0 0 0" if "Shadow" in n else TEXT))
@@ -212,6 +234,9 @@ def patch_classselection(src, dst):
             armedFgColor_override=TEXT, depressedFgColor_override=TEXT)(b))
     for n in ("Offense", "Defense", "Support"):
         t = edit_block(t, n, lambda b: place(fgcolor=DIM, textAlignment="center", wide=str(BUTTON_W * 3), zpos="2")(b))
+    t = edit_block(t, "CancelButton", flat_button(cancel=True))
+    t = edit_block(t, "EditLoadoutButton", flat_button())
+    t = edit_block(t, "ResetButton", flat_button())
     t = edit_block(t, "ClassMenuSelect", label("30", "r40", "450", "30", "MerTitle", align="west", zpos="6"))
 
     extra = new_panel("MerScrim", "0", "0", "f0", "480", SCRIM, z="0")

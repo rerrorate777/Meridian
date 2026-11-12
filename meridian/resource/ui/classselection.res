@@ -736,7 +736,17 @@
 		"textAlignment"	"center"
 		"Command"		"vguicancel"
 		"font"			"MerBody"
-		"fgcolor_override" "200 80 60 255"
+		"paintbackground"		"1"
+		"paintborder"		"0"
+		"border_default"		"NoBorder"
+		"border_armed"		"NoBorder"
+		"border_depressed"		"NoBorder"
+		"defaultBgColor_override"		"28 32 40 235"
+		"armedBgColor_override"		"46 52 64 235"
+		"depressedBgColor_override"		"60 68 82 235"
+		"defaultFgColor_override"		"224 84 72 255"
+		"armedFgColor_override"		"255 130 118 255"
+		"depressedFgColor_override"		"255 130 118 255"
 	}
 	
 	"EditLoadoutButton" [$WIN32] 
@@ -757,6 +767,17 @@
 		"textAlignment"	"center"
 		"Command"		"openloadout"
 		"font"			"MerBody"
+		"paintbackground"		"1"
+		"paintborder"		"0"
+		"border_default"		"NoBorder"
+		"border_armed"		"NoBorder"
+		"border_depressed"		"NoBorder"
+		"defaultBgColor_override"		"28 32 40 235"
+		"armedBgColor_override"		"46 52 64 235"
+		"depressedBgColor_override"		"60 68 82 235"
+		"defaultFgColor_override"		"MerText"
+		"armedFgColor_override"		"255 255 255 255"
+		"depressedFgColor_override"		"255 255 255 255"
 	}
 
 	"ResetButton" [$WIN32] 
@@ -777,6 +798,17 @@
 		"textAlignment"	"center"
 		"Command"		"resetclass"
 		"font"			"MerBody"
+		"paintbackground"		"1"
+		"paintborder"		"0"
+		"border_default"		"NoBorder"
+		"border_armed"		"NoBorder"
+		"border_depressed"		"NoBorder"
+		"defaultBgColor_override"		"28 32 40 235"
+		"armedBgColor_override"		"46 52 64 235"
+		"depressedBgColor_override"		"60 68 82 235"
+		"defaultFgColor_override"		"MerText"
+		"armedFgColor_override"		"255 255 255 255"
+		"depressedFgColor_override"		"255 255 255 255"
 	}
 
 	"ClassMenuSelect"
