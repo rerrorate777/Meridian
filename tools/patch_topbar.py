@@ -18,6 +18,12 @@ import sys
 PANEL = "12 14 18 205"
 TEXT = "236 240 244 255"
 
+# Player list room. Stock fits 12 a side into 133 units (portraits shrink to ~11 wide, and the
+# frame is 365 wide). TF2 is a 12v12 game, so widen both: twelve portraits get ~16 wide instead of
+# 11. (240 would give them the full 19, but makes the bar look empty at 6v6.)
+EXPAND = 200
+FRAME_W = 2 * (47 + EXPAND + 8)
+
 # portrait backgrounds: muted team colours, darker when dead
 PORTRAIT = {
     "color_portrait_bg_red": "108 48 44 255",
@@ -73,6 +79,9 @@ def patch_matchstatus(src, dst):
         return b
 
     t = edit_block(t, "BGFrame", frame)
+    t = edit_block(t, "BGFrame", lambda b: key(b, "wide", str(FRAME_W), "BGFrame"))
+    for k in ("team1_max_expand", "team2_max_expand"):
+        t = sub1(r'("%s"\s*)"133"' % k, r'\1"%d"' % EXPAND, t, k)
 
     # timer text inside the notch (match layout only: the "if_match" block)
     def timer(b):
