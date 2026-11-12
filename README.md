@@ -159,10 +159,6 @@ Every patch has to match exactly once. If it does not the process stops. This me
 
 ## Known limits
 
-* Not yet tested in the game. It was. Checked on a machine that does not have TF2. You may need to adjust a numbers the first time you run it. Using `--link` and `hud_reloadscheme` will make a loop. Let me know if anything looks wrong.
-
-* Health is a number, not a bar. TF2 uses a fixed class image for the health graphic so it cannot be turned into a bar. Overheal and low health are shown by a growing or pulsing underline instead. The underline is red when the health is low. The overheal underline should pulse white. I could not verify that without the game.
-
 * The Vaccinator resist icon and some status icons use the stock icon art.
 
 * Barlow covers Latin scripts. Player names written in scripts may show missing letters where Meridian displays a name in its own font such, as target ID or the scoreboards name box. The scoreboard player rows keep the stock font for that reason.
