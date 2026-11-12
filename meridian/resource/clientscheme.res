@@ -317,9 +317,9 @@ Scheme
 		ListPanel.EmptyListInfoTextColor	"150 160 172 255"
 
 		Menu.TextColor					"TanLight"
-		Menu.BgColor					"TransparentBlack"
-		Menu.ArmedTextColor				"TanDark"
-		Menu.ArmedBgColor				"TanLight"
+		Menu.BgColor					"28 32 40 245"
+		Menu.ArmedTextColor				"255 255 255 255"
+		Menu.ArmedBgColor				"60 68 82 235"
 		Menu.TextInset					"6"
 
 		Chat.TypingText					"Orange"
@@ -361,16 +361,16 @@ Scheme
 		ScrollBarSlider.FgColor				"Gray"		// nob color
 		ScrollBarSlider.BgColor				"Blank"		// slider background color
 
-		SectionedListPanel.HeaderTextColor	"Orange"
+		SectionedListPanel.HeaderTextColor	"150 160 172 255"
 		SectionedListPanel.HeaderBgColor	"Blank"
 		SectionedListPanel.DividerColor		"Black"
-		SectionedListPanel.TextColor		"Orange"
-		SectionedListPanel.BrightTextColor	"Orange"
+		SectionedListPanel.TextColor		"236 240 244 255"
+		SectionedListPanel.BrightTextColor	"236 240 244 255"
 		SectionedListPanel.BgColor			"TransparentLightBlack"
-		SectionedListPanel.SelectedTextColor			"Black"
-		SectionedListPanel.SelectedBgColor				"Red"
-		SectionedListPanel.OutOfFocusSelectedTextColor	"Black"
-		SectionedListPanel.OutOfFocusSelectedBgColor	"255 255 255 14"
+		SectionedListPanel.SelectedTextColor			"255 255 255 255"
+		SectionedListPanel.SelectedBgColor				"60 68 82 235"
+		SectionedListPanel.OutOfFocusSelectedTextColor	"255 255 255 255"
+		SectionedListPanel.OutOfFocusSelectedBgColor	"46 52 64 235"
 
 		Slider.NobColor				"108 108 108 255"
 		Slider.TextColor			"127 140 127 255"

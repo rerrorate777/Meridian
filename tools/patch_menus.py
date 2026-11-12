@@ -91,6 +91,12 @@ BASE = {
     "TextEntry.TextColor": TEXT, "TextEntry.BgColor": "28 32 40 255", "TextEntry.CursorColor": TEXT,
     "TextEntry.SelectedBgColor": BTN_PRESSED,
     "Tooltip.TextColor": TEXT, "Tooltip.BgColor": "12 14 18 235",
+    # sectioned lists (the Call Vote dialog: orange headings / items, red selection bar) and drop-down menus
+    "SectionedListPanel.HeaderTextColor": DIM, "SectionedListPanel.TextColor": TEXT,
+    "SectionedListPanel.BrightTextColor": TEXT, "SectionedListPanel.SelectedTextColor": WHITE,
+    "SectionedListPanel.SelectedBgColor": BTN_PRESSED, "SectionedListPanel.OutOfFocusSelectedTextColor": WHITE,
+    "SectionedListPanel.OutOfFocusSelectedBgColor": BTN_ARMED,
+    "Menu.BgColor": "28 32 40 245", "Menu.ArmedTextColor": WHITE, "Menu.ArmedBgColor": BTN_PRESSED,
 }
 
 FONTS = {
