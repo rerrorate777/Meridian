@@ -306,7 +306,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"paintbackground"	"1"
 		"paintborder"		"0"
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"image_armedcolor"	"255 255 255 255"
 
 		"SubImage"
@@ -556,7 +556,7 @@
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
 			"paintbackground" "0"
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
 			
 			"SubImage"
@@ -625,7 +625,7 @@
 			"sound_released"	"UI/buttonclickrelease.wav"
 			"paintbackground"	"0"
 			"paintborder"		"0"
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
 
 			"SubImage"
@@ -698,7 +698,7 @@
 			"sound_released"	"UI/buttonclickrelease.wav"
 			"paintbackground"	"0"
 			"paintborder"		"0"
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
 
 			"SubImage"
@@ -770,7 +770,7 @@
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
 			"paintbackground" "0"
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
 
 			"SubImage"
@@ -876,7 +876,7 @@
 			"armedFgColor_override" "255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"200 80 60 255"
 			"SubImage"
 			{
@@ -1102,7 +1102,7 @@
 			"sound_released"	"UI/buttonclickrelease.wav"
 			"paintbackground" "0"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
 			"SubImage"
 			{
@@ -1150,7 +1150,7 @@
 			"sound_released"	"UI/buttonclickrelease.wav"
 			"paintbackground" "0"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
 			"SubImage"
 			{
@@ -2043,7 +2043,7 @@
 			"armedFgColor_override" "255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"235 226 202 255"
 
 			"proportionaltoparent"	"1"
@@ -2112,7 +2112,7 @@
 			"armedFgColor_override" "255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"235 226 202 255"
 			"proportionaltoparent"	"1"
 			
@@ -2179,7 +2179,7 @@
 			"armedFgColor_override" "255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"235 226 202 255"
 			"proportionaltoparent"	"1"
 			
@@ -2247,7 +2247,7 @@
 			"armedFgColor_override" "255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"image_drawcolor"	"235 226 202 255"
+			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"235 226 202 255"
 			"proportionaltoparent"	"1"
 			
@@ -2324,7 +2324,7 @@
 			
 		"paintbackground"	"1"
 				
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2386,7 +2386,7 @@
 			
 		"paintbackground"	"1"
 				
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2434,7 +2434,7 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2482,7 +2482,7 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2531,7 +2531,7 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2578,7 +2578,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2627,7 +2627,7 @@
 		"PaintBackgroundType" "0"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2674,7 +2674,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2721,7 +2721,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2768,7 +2768,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2815,7 +2815,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2862,7 +2862,7 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"border_default"	"MainMenuSubButtonBorder"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2908,7 +2908,7 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"
@@ -2952,7 +2952,7 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		
-		"image_drawcolor"	"235 226 202 255"
+		"image_drawcolor"	"255 255 255 255"
 		"SubImage"
 		{
 			"ControlName"	"ImagePanel"

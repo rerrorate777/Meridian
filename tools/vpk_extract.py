@@ -51,6 +51,22 @@ def entries(path):
                     yield full, pre, idx, off, length, data_start
 
 
+def extract_bytes(vpk, path):
+    """Return the bytes of one file inside a *_dir.vpk (or None)."""
+    base = vpk[: -len("_dir.vpk")] if vpk.endswith("_dir.vpk") else vpk
+    for full, pre, idx, off, length, data_start in entries(vpk):
+        if full.lower() != path.lower():
+            continue
+        if idx == 0x7FFF:
+            with open(vpk, "rb") as f:
+                f.seek(data_start + off)
+                return pre + f.read(length)
+        with open("%s_%03d.vpk" % (base, idx), "rb") as f:
+            f.seek(off)
+            return pre + f.read(length)
+    return None
+
+
 def main():
     if len(sys.argv) < 4:
         raise SystemExit(__doc__)

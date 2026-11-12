@@ -199,6 +199,8 @@ def patch_mainmenu(src, dst):
     t = re.sub(r'("(?:default|armed|depressed)FgColor_override"\s*)"(?:46 43 42 255|235 226 202 255)"',
                lambda m: m.group(1) + '"' + (TEXT if "default" in m.group(1) else WHITE) + '"', t)
     t = re.sub(r'("fgcolor"\s*)"LabelDark"', r'\1"%s"' % DIM, t)
+    # the top-right image buttons are tinted cream; their textures are recoloured (gen_menu_icons.py), so no tint
+    t = re.sub(r'("image_drawcolor"\s*)"235 226 202 255"', r'\1"%s"' % WHITE, t)
     t = re.sub(r'("fgcolor(?:_override)?"\s*)"23[45] 22[67] 20[23] 255"', r'\1"%s"' % TEXT, t)  # cream text
     write(dst, t)
 
