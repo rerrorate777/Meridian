@@ -32,7 +32,35 @@ The file `meridian/cfg/meridian.cfg` sets `cl_hud_playerclass_use_playermodel 0`
 
 ## What is restyled
 
-(will put images here soon)
+### In game
+
+![Meridian in a match: building list, weapon selection, item meter, metal, target ID](docs/screenshots/hud.png)
+
+The health and ammo docks, item meters, building list, weapon selection and target ID are flat panels with a team-coloured accent edge. The match bar at the top (12v12 portraits, round timer) is in the same style.
+
+![The scoreboard](docs/screenshots/scoreboard.png)
+
+### Joining a game
+
+| Team select | Class select |
+| --- | --- |
+| ![Team select](docs/screenshots/team-select.png) | ![Class select](docs/screenshots/class-select.png) |
+
+![The map info screen](docs/screenshots/map-info.png)
+
+### Menus
+
+![The main menu](docs/screenshots/main-menu.png)
+
+| Loadout | Class loadout |
+| --- | --- |
+| ![Loadout](docs/screenshots/loadout.png) | ![Soldier loadout](docs/screenshots/loadout-class.png) |
+
+| Find a Game | Call Vote |
+| --- | --- |
+| ![Find a Game](docs/screenshots/find-a-game.png) | ![Call Vote](docs/screenshots/call-vote.png) |
+
+The main menu, pause menu, options dialogs, MOTD and the other chalkboard windows use the same flat buttons and panels.
 
 Fonts are Barlow and Barlow Condensed (SIL OFL, licence in `resource/fonts/ofl.txt`). They are shipped inside the HUD so nothing depends on system fonts. Sizes are set for each 16:10 resolution band so text scales with the layout.
 
