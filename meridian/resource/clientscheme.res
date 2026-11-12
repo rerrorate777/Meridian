@@ -3624,13 +3624,39 @@ Scheme
 		ButtonKeyFocusBorder
 		{
 			"inset" "0 0 0 0"
-			"backgroundtype" "2"
+			"backgroundtype" "0"
+			Left
+			{
+				"1"
+				{
+					"color" "150 160 172 255"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "150 160 172 255"
+					"offset" "0 0"
+				}
+			}
 		}
 
 		ButtonDepressedBorder
 		{
 			"inset" "0 0 0 0"
-			"backgroundtype" "2"
+			"backgroundtype" "0"
+			Left
+			{
+				"1"
+				{
+					"color" "236 240 244 255"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "236 240 244 255"
+					"offset" "0 0"
+				}
+			}
 		}
 
 		ComboBoxBorder
@@ -6180,6 +6206,7 @@ Scheme
 		MerButtonBorder
 		{
 			"inset" "0 0 0 0"
+			"backgroundtype" "0"
 			Left
 			{
 				"1"
@@ -6198,6 +6225,7 @@ Scheme
 		MerButtonBorderArmed
 		{
 			"inset" "0 0 0 0"
+			"backgroundtype" "0"
 			Left
 			{
 				"1"
