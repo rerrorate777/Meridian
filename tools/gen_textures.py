@@ -14,6 +14,12 @@ PANELS = {
     "mer_panel": (12, 14, 18, 205),
     "mer_panel_red": (86, 34, 30, 215),
     "mer_panel_blue": (28, 58, 92, 215),
+    # menus (see patch_menus.py): buttons, their hover / pressed states, opaque dialogs, list wells
+    "mer_btn": (28, 32, 40, 235),
+    "mer_btn_hover": (46, 52, 64, 235),
+    "mer_btn_press": (60, 68, 82, 235),
+    "mer_panel_solid": (18, 20, 26, 255),
+    "mer_inset": (255, 255, 255, 10),
 }
 
 # name -> RGB. Keep in sync with the colours referenced in the .res files.
