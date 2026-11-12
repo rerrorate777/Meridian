@@ -64,6 +64,7 @@ health dock shows the 2D class icon; with the stock setting (`1`) TF2 draws the
 | Target ID (team-tinted) | `resource/ui/targetid.res` |
 | Floating +health / damage numbers | `hudhealthaccount.res`, `huddamageaccount.res` |
 | Main menu and shared UI: panel/button borders, button and frame colours, the tan palette -> greys | `resource/ui/mainmenuoverride.res`, Borders/Colors/BaseSettings in `resource/clientscheme.res` |
+| Top bar (chat, party slots, Find a Game / Resume / Disconnect / Quit) and the Find a Game screens: mode selection, Casual, Competitive, MvM, lobbies | `resource/ui/matchmaking*.res`, `lobby*.res`, `mainmenuplaylistentry.res`... (tools/patch_matchmaking.py) |
 | Dialogs (Options, server browser, popups): dark buttons, tabs, lists, selection | `resource/sourcescheme.res` (colours only; fonts stay stock) |
 | Team select (three flat cards) and class select (dark scrim, Meridian text, class tips) | `resource/ui/teammenu*.res`, `classselection*.res`, `classtipsitem.res` |
 | Tab scoreboard: flat frame, tinted team banners (no logos), Meridian fonts; player rows keep the stock font | `resource/ui/scoreboard.res`, `Scoreboard*` fonts in `resource/clientscheme.res` |
@@ -80,7 +81,7 @@ scales with the layout.
 
 ### Left as stock
 
-The remaining HUD files keep the default look: control point icons, win panel, Demoman stickies, MvM, the loadout/store screens (they pick up the new colours and borders but keep their stock art),
+The remaining HUD files keep the default look: control point icons, win panel, Demoman stickies, MvM, the loadout/store screens (they pick up the new colours and borders but keep their stock art), the four image buttons at the top right of the main menu (the tan square is part of the image),
 and MvM. Add restyled copies to `meridian/resource/ui/` to override any of them.
 
 ## 16:10 notes
@@ -119,6 +120,7 @@ python3 tools/patch_ui.py     STOCK/resource/ui                  meridian/resour
 python3 tools/gen_meters.py                                      # restyle the class item meters
 python3 tools/patch_topbar.py  STOCK/resource/ui                  meridian/resource/ui
 python3 tools/patch_menus.py STOCK/resource/ui                    meridian
+python3 tools/patch_matchmaking.py STOCK/resource/ui              meridian/resource/ui
 python3 tools/patch_sourcescheme.py STOCK/resource/sourcescheme.res meridian/resource/sourcescheme.res
 python3 tools/patch_classteam.py STOCK/resource/ui                meridian/resource/ui
 python3 tools/patch_scoreboard.py STOCK/resource/ui               meridian

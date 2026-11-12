@@ -59,7 +59,7 @@ Scheme
 		"BrightYellow"		"251 235 0 255"
 		//"Black"				"0 0 0 255"
 		//Changed black to a NTSC safe color
-		"GreenSolid"		 "76 107 34 255"
+		"GreenSolid"		 "46 110 70 255"
 		
 		"Black"				"16 18 24 255"
 		"TransparentBlack"	"0 0 0 196"
@@ -77,7 +77,7 @@ Scheme
 		"HudBlack"			"65 65 65 255"
 		"ProgressBarBlue"	"91 122 142 255"
 		
-		"CreditsGreen"		"94 150 49 255"
+		"CreditsGreen"		"72 160 100 255"
 		
 		"Gray"				"178 178 178 255"
 
@@ -197,7 +197,7 @@ Scheme
 		"QualityColorCollectors_GreyedOut"		"60 0 0 255"
 		"QualityColorPaintkitWeapon_GreyedOut"	"60 60 60 255"
 		
-		"SaleGreen"								"76 107 34 255"
+		"SaleGreen"								"46 110 70 255"
 
 		"LightRed"								"200 80 60 255"
 		"LighterRed"							"220 100 80 255"
@@ -5681,7 +5681,7 @@ Scheme
 			{
 				"1"
 				{
-					"color" "TanDark"
+					"color" "60 68 82 255"
 					"offset" "0 1"
 				}
 			}
@@ -5690,7 +5690,7 @@ Scheme
 			{
 				"1"
 				{
-					"color" "TanDark"
+					"color" "60 68 82 255"
 					"offset" "1 0"
 				}
 			}
@@ -5699,7 +5699,7 @@ Scheme
 			{
 				"1"
 				{
-					"color" "TanDark"
+					"color" "60 68 82 255"
 					"offset" "0 0"
 				}
 			}
@@ -5708,7 +5708,7 @@ Scheme
 			{
 				"1"
 				{
-					"color" "TanDark"
+					"color" "60 68 82 255"
 					"offset" "0 0"
 				}
 			}
@@ -5722,7 +5722,7 @@ Scheme
 			{
 				"1"
 				{
-					"color" "TanDark"
+					"color" "60 68 82 255"
 					"offset" "1 0"
 				}
 			}
@@ -5841,22 +5841,22 @@ Scheme
 			"bordertype"			"scalable_image"
 			"backgroundtype"		"2"
 			
-			"image"					"replay/panel_scalable_default"
-			"src_corner_height"		"23"			// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"7"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"7"	
+			"image"					"meridian/mer_panel_solid"
+			"src_corner_height"		"1"			// pixels inside the image
+			"src_corner_width"		"1"
+			"draw_corner_width"		"1"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"1"	
 		}
 		ReplayHighlightBorder
 		{
 			"bordertype"			"scalable_image"
 			"backgroundtype"		"2"
 			
-			"image"					"replay/panel_scalable_highlight"
-			"src_corner_height"		"23"			// pixels inside the image
-			"src_corner_width"		"23"
-			"draw_corner_width"		"7"				// screen size of the corners ( and sides ), proportional
-			"draw_corner_height" 	"7"	
+			"image"					"meridian/mer_btn_hover"
+			"src_corner_height"		"1"			// pixels inside the image
+			"src_corner_width"		"1"
+			"draw_corner_width"		"1"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"1"	
 		}
 		ReplayBalloonBorder
 		{

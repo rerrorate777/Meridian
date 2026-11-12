@@ -39,11 +39,17 @@ BORDERS = {
     "MainMenuHighlightBorder": "mer_panel_solid", "TrainingResultsBG": "mer_panel_solid",
     "ArmoryScrollbarBox": "mer_btn", "ArmoryScrollbarWell": "mer_inset",
     "RedWithThinBorder": "mer_panel_red", "BlueWithThinBorder": "mer_panel_blue",
+    "ReplayDefaultBorder": "mer_panel_solid", "ReplayHighlightBorder": "mer_btn_hover",
 }
+
+# 1px outline borders (not images): TanDark became a light grey, which is too bright for an outline
+OUTLINE_BORDERS = ("QuickplayBorder", "SortCategoryBorder")
+OUTLINE = "60 68 82 255"
 
 # the tan palette
 COLORS = {
     "TanLight": TEXT, "TanDark": DIM, "TanDarker": "12 14 18 255", "HudOffWhite": "200 208 218 255",
+    "GreenSolid": "46 110 70 255", "SaleGreen": "46 110 70 255", "CreditsGreen": "72 160 100 255",
     "Black": "16 18 24 255",  # was a brown-black, used for the tan-era text and bars
     "ProgressOffWhite": TEXT, "LighterDarkBrown": "34 38 46 255", "DarkBrown": "22 25 32 255",
 }
@@ -109,6 +115,11 @@ def patch_scheme(path):
         blk = re.sub(r'("src_corner_(?:height|width)"\s*)"\d+"', r'\1"1"', blk)
         blk = re.sub(r'("draw_corner_(?:height|width)"\s*)"\d+"', r'\1"1"', blk)
         b = b[:m.start()] + blk + b[m.end():]
+    for name in OUTLINE_BORDERS:
+        m = re.search(r'\n\t\t%s\s*\n\t\t\{.*?\n\t\t\}' % re.escape(name), b, re.S)
+        if not m:
+            raise SystemExit("scheme border not found: " + name)
+        b = b[:m.start()] + m.group(0).replace('"TanDark"', '"%s"' % OUTLINE) + b[m.end():]
     t = t[:i] + b + t[j:]
     # BaseSettings colours
     for name, value in BASE.items():
@@ -131,6 +142,21 @@ def edit_block(text, name, fn):
     return text[:s] + fn(text[s:e]) + text[e:]
 
 
+def setk(b, k, v):
+    """Set a key in a top-level block (added when missing; [$...] copies dropped)."""
+    b = re.sub(r'\n\t\t"%s"[^\n]*\[\$[^\n]*' % re.escape(k), "", b)
+    if re.search(r'\n\t\t"%s"\s*"' % re.escape(k), b):
+        return sub1(r'(\n\t\t"%s"\s*)"[^"]*"' % re.escape(k), lambda m: m.group(1) + '"' + v + '"', b, k)
+    return b[:b.rindex("\n\t}")] + '\n\t\t"%s"\t\t"%s"' % (k, v) + b[b.rindex("\n\t}"):]
+
+
+def hide_panel(b):
+    """Park a panel as a 1x1 off screen (the game may still show it, but nothing is drawn)."""
+    for k, v in (("xpos", "-10"), ("ypos", "-10"), ("wide", "1"), ("tall", "1")):
+        b = setk(b, k, v)
+    return b
+
+
 def flat_fill(color):
     """An image panel drawn from art -> a flat fill."""
     def fn(b):
@@ -143,6 +169,22 @@ def patch_mainmenu(src, dst):
     t = read(src)
     t = edit_block(t, "BackgroundFooter", flat_fill("10 12 16 245"))
     t = edit_block(t, "FooterLine", flat_fill("46 52 64 255"))
+    # The "Featured" store item panel is gone; the friends list moves up into its place
+    t = edit_block(t, "EventPromo", hide_panel)
+    t = edit_block(t, "FriendsContainer", lambda b: setk(setk(b, "ypos", "160"), "tall", "250"))
+
+    # inside the friends panel the list is anchored to the bottom ("rs1-10"); anchor it under the title
+    def friends_inner(b):
+        for name in ("SteamFriendsList", "InnerShadow", "BelowDarken"):
+            m = re.search(r'\n\t\t"%s"\s*\n\t\t\{.*?\n\t\t\}' % name, b, re.S)
+            if not m:
+                raise SystemExit("FriendsContainer child not found: " + name)
+            blk = m.group(0)
+            blk = sub1(r'(\n\t\t\t"ypos"\s*)"rs1-10"', r'\1"30"', blk, name + ".ypos")
+            blk = sub1(r'(\n\t\t\t"tall"\s*)"110"', r'\1"210"', blk, name + ".tall")
+            b = b[:m.start()] + blk + b[m.end():]
+        return b
+    t = edit_block(t, "FriendsContainer", friends_inner)
     # Solid backdrop. The sepia photo behind the character is the 3D background map; vgui panels draw
     # over it, and the character panel (TFCharacterImage, zpos -99, hidden by the game while in a
     # match) sits above this one, so the character stays and the map goes. (It also covers the game
