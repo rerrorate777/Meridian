@@ -22,10 +22,11 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import patch_matchmaking as mm  # noqa: E402
+import patch_menus as pm  # noqa: E402  (hide_panel)
 
 FILE_RE = re.compile(r"(charinfo|classloadout|loadoutpreset|itemselection|itemslot|crafting|giveaway|importpreview|"
                      r"itemoptions|itemrename|itemdiscard|itempickup|inspection|paintkit|collection|manncotrade|"
-                     r"backpack|store|quest|armory|mvmecon)")
+                     r"backpack|store|quest|armory|mvmecon|statsummary)")
 # "NextButton"/"CloseButton" are arrows / an X in most files, so these are listed per file
 EXTRA_BUTTONS = {
     "econ/itempickuppanel.res": {"NextButton", "PrevButton", "CloseButton", "OpenLoadoutButton", "DiscardButton"},
@@ -61,6 +62,17 @@ def patch_charinfo(t):
     return t
 
 
+def patch_loading(t):
+    """The loading screen is statsummary.res: a full-screen character image (MainBackground) with the
+    "Your Performance Report" / "Your Best Moments" panel (StatData) over it. Both are parked off screen
+    (the game builds their contents in code and clips them to the 1x1 panel); the map name, the tips
+    and the loading dialog stay, on a solid dark background. (statsummary_embedded.res, the Stats tab
+    in the loadout, is not touched.)"""
+    for name in ("StatData", "MainBackground"):
+        t = mm.edit_block(t, name, pm.hide_panel)
+    return mm.edit_block(t, "TFStatsSummary", lambda b: pm.setk(b, "bgcolor_override", "10 12 16 255"))
+
+
 def flat_lines(t):
     """Image panels that draw the tan dotted / solid divider art -> a thin flat line."""
     pat = re.compile(r'"image"\s*"(?:loadout_dotted_line|loadout_solid_line)"')
@@ -94,6 +106,8 @@ def main():
         out = flat_lines(out) if rel != "charinfopanel.res" else out
         if rel == "charinfopanel.res":
             out = patch_charinfo(out)
+        if rel == "statsummary.res":
+            out = patch_loading(out)
         out, nb = mm.style_buttons(out)
         styled += nb
         if rel in EXTRA_BUTTONS:  # text buttons that share a name with image buttons elsewhere
