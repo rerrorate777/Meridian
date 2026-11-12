@@ -370,7 +370,7 @@ Scheme
 		SectionedListPanel.SelectedTextColor			"Black"
 		SectionedListPanel.SelectedBgColor				"Red"
 		SectionedListPanel.OutOfFocusSelectedTextColor	"Black"
-		SectionedListPanel.OutOfFocusSelectedBgColor	"255 255 255 32"
+		SectionedListPanel.OutOfFocusSelectedBgColor	"255 255 255 14"
 
 		Slider.NobColor				"108 108 108 255"
 		Slider.TextColor			"127 140 127 255"
@@ -1588,50 +1588,50 @@ Scheme
 			}
 		}
 		"ScoreboardVerySmall"
-		{
+		{ // meridian
 			"1"
 			{
-				"name"		"Verdana"
-				"tall"		"8"
-				"tall_hidef"	"10"
-				"tall_lodef"	"14"
-				"weight"	"400"
+				"name"		"Barlow"
+				"tall"		"12"
+				"tall_hidef"	"14"
+				"tall_lodef"	"18"
+				"weight"	"700"
 				"additive"	"0"
 				"antialias" "1"
 			}
 		}
 		"ScoreboardSmall"
-		{
+		{ // meridian
 			"1"
 			{
-				"name"		"TF2 Secondary"
-				"tall"		"10"
-				"tall_hidef"	"12"
-				"tall_lodef"	"14"
-				"weight"	"400"
+				"name"		"Barlow"
+				"tall"		"11"
+				"tall_hidef"	"13"
+				"tall_lodef"	"15"
+				"weight"	"700"
 				"additive"	"0"
 				"antialias" "1"
 			}
 		}
 		"ScoreboardMediumSmall"
-		{
+		{ // meridian
 			"1"
 			{
-				"name"		"TF2"
-				"tall"		"14"
-				"weight"	"500"
+				"name"		"Barlow"
+				"tall"		"15"
+				"weight"	"700"
 				"range"		"0x0000 0x007F"	//	Basic Latin
 				"antialias" "1"
 				"additive"	"0"
 			}
 		}
 		"ScoreboardMedium"
-		{
+		{ // meridian
 			"1"
 			{
-				"name"		"TF2 Secondary"
+				"name"		"Barlow"
 				"tall"		"20"
-				"weight"	"500"
+				"weight"	"700"
 				"range"		"0x0000 0x007F"	//	Basic Latin
 				"antialias" "1"
 				"additive"	"0"
@@ -1652,24 +1652,24 @@ Scheme
 			}
 		}
 		"ScoreboardTeamCountNew"
-		{
+		{ // meridian
 			"1"
 			{
-				"name"		"TF2 Secondary"
+				"name"		"Barlow"
 				"tall"		"14"
-				"weight"	"500"
+				"weight"	"700"
 				"range"		"0x0000 0x007F"	//	Basic Latin
 				"antialias" "1"
 				"additive"	"0"
 			}
 		}
 		"ScoreboardTeamNameNew"
-		{
+		{ // meridian
 			"1"
 			{
-				"name"		"TF2 Secondary"
+				"name"		"Barlow"
 				"tall"		"20"
-				"weight"	"500"
+				"weight"	"700"
 				"range"		"0x0000 0x007F"	//	Basic Latin
 				"antialias" "1"
 				"additive"	"0"
@@ -1691,13 +1691,13 @@ Scheme
 		}
 
 		"ScoreboardTeamScoreNew"
- 		{
+ 		{ // meridian
 			"1"
 			{
-				"name"		"TF2"
+				"name"		"Barlow Condensed"
 				"tall"		"36"
 				"tall_hidef"	"48"
-				"weight"	"500"
+				"weight"	"700"
 				"additive"	"0"
 				"antialias" "1"
 			}
