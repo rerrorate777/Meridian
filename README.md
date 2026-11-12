@@ -69,6 +69,7 @@ health dock shows the 2D class icon; with the stock setting (`1`) TF2 draws the
 | Loadout screens (class picker, class page, item picker, backpack, the "New Item Acquired" drop screen): flat header/footer/dividers, dark item tiles (quality tints kept), search box | `resource/ui/charinfo*.res`, `classloadoutpanel.res`, `itemselectionpanel.res`, `econ/**`, `BackpackItemBorder*` in `resource/clientscheme.res` (tools/patch_loadout.py) |
 | Dialogs (Options, server browser, popups): dark buttons, tabs, lists, selection | `resource/sourcescheme.res` (colours only; fonts stay stock) |
 | Team select (three flat cards) and class select (dark scrim, Meridian text, class tips) | `resource/ui/teammenu*.res`, `classselection*.res`, `classtipsitem.res` |
+| Message of the day (the chalkboard shown when joining a server): dark card instead of the 3D chalkboard scene | `resource/ui/textwindow*.res` |
 | Tab scoreboard: flat frame, tinted team banners (no logos), Meridian fonts; player rows keep the stock font | `resource/ui/scoreboard.res`, `Scoreboard*` fonts in `resource/clientscheme.res` |
 | Top bar: player portraits, round timer notch, match frame | `resource/ui/hudmatchstatus.res`, `hudobjectivetimepanel.res`, `hudroundcounter.res` |
 | Building list (top-left): flat team-tinted panels, Meridian labels | `resource/ui/hud_obj_*.res`, `scripts/mod_textures.txt` |

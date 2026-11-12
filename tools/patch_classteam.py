@@ -10,6 +10,7 @@ dark scrim replaces them.
   * teammenu.res / teammenu_sc.res        three flat cards (Random, BLU, RED) plus a Spectate button
   * classselection.res / _sc.res          scrim instead of the classroom, flat bottom bar
   * classtipsitem.res                     the class tips drop the chalkboard font
+  * textwindow.res / _sc.res              the message-of-the-day window (chalkboard scene -> dark card)
   * all                                   Meridian fonts and text colours
 
 Every edit must match exactly once, otherwise the script aborts (see patch_layout.py).
@@ -268,6 +269,23 @@ def patch_classselection(src, dst):
     write(dst, apply_fonts(append(t, extra)))
 
 
+def patch_motd(src, dst):
+    """The message of the day (chalkboard) window shown when joining a server: dark scrim, a card behind
+    the text, Meridian fonts, flat Continue button. The server's own HTML MOTD (HTMLMessage) keeps its
+    content and styling; it just sits on the card."""
+    t = read(src)
+    t = edit_block(t, "MenuBG", hide_model)
+    t = edit_block(t, "ShadedBar", flat_bar)
+    t = edit_block(t, "ok", flat_button())
+    t = edit_block(t, "TFMessageTitle", lambda b: place(font="MerTitle", fgcolor=TEXT, zpos="5")(b))
+    t = edit_block(t, "TFTextMessage", lambda b: place(font="MerBody", fgcolor=TEXT, zpos="5")(b))
+    t = edit_block(t, "HTMLMessage", lambda b: place(zpos="5")(b))
+    extra = new_panel("MerScrim", "0", "0", "f0", "480", SCRIM, z="0")
+    extra += new_panel("MerMotdCard", "c-200", "68", "447", "312", CARD, z="1")
+    extra += new_panel("MerMotdCardEdge", "c-200", "68", "447", "4", EDGE_NEUTRAL, z="2")
+    write(dst, apply_fonts(append(t, extra)))
+
+
 def patch_tips(src, dst):
     t = read(src)
     t = sub1(r'(\n\t\t\t"font"\s*)"ChalkboardText"', r'\1"MerBody"\n\t\t\t"fgcolor"\t\t\t"%s"' % TEXT, t, "classtips.font")
@@ -280,7 +298,7 @@ def main():
     stock, mer = sys.argv[1], sys.argv[2]
     for name, fn in (("teammenu.res", patch_teammenu), ("teammenu_sc.res", patch_teammenu),
                      ("classselection.res", patch_classselection), ("classselection_sc.res", patch_classselection),
-                     ("classtipsitem.res", patch_tips)):
+                     ("classtipsitem.res", patch_tips), ("textwindow.res", patch_motd), ("textwindow_sc.res", patch_motd)):
         fn(os.path.join(stock, name), os.path.join(mer, name))
         print("patched", name)
 
