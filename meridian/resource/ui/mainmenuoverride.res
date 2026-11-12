@@ -3000,4 +3000,18 @@
 			"angles_z"		"0"
 		}
 	}
+	"MerBackdrop"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerBackdrop"
+		"xpos"			"0"
+		"ypos"			"0"
+		"zpos"			"-150"
+		"wide"			"f0"
+		"tall"			"480"
+		"visible"		"1"
+		"enabled"		"1"
+		"mouseinputenabled"	"0"
+		"fillcolor"		"10 12 16 255"
+	}
 }

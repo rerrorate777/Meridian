@@ -143,6 +143,15 @@ def patch_mainmenu(src, dst):
     t = read(src)
     t = edit_block(t, "BackgroundFooter", flat_fill("10 12 16 245"))
     t = edit_block(t, "FooterLine", flat_fill("46 52 64 255"))
+    # Solid backdrop. The sepia photo behind the character is the 3D background map; vgui panels draw
+    # over it, and the character panel (TFCharacterImage, zpos -99, hidden by the game while in a
+    # match) sits above this one, so the character stays and the map goes. (It also covers the game
+    # view behind the in-game pause menu; there is no way to tell the two apart in this file.)
+    i = t.rindex("}")
+    t = t[:i] + ('\t"MerBackdrop"\n\t{\n\t\t"ControlName"\t"ImagePanel"\n\t\t"fieldName"\t\t"MerBackdrop"\n'
+                 '\t\t"xpos"\t\t\t"0"\n\t\t"ypos"\t\t\t"0"\n\t\t"zpos"\t\t\t"-150"\n\t\t"wide"\t\t\t"f0"\n'
+                 '\t\t"tall"\t\t\t"480"\n\t\t"visible"\t\t"1"\n\t\t"enabled"\t\t"1"\n'
+                 '\t\t"mouseinputenabled"\t"0"\n\t\t"fillcolor"\t\t"10 12 16 255"\n\t}\n') + t[i:]
     t = re.sub(r'(\n\s*"font"\s*)"(%s)"' % "|".join(FONTS), lambda m: m.group(1) + '"' + FONTS[m.group(2)] + '"', t)
     # dark text that sat on tan buttons -> light text; the light hover text -> white
     t = re.sub(r'("(?:default|armed|depressed)FgColor_override"\s*)"(?:46 43 42 255|235 226 202 255)"',
