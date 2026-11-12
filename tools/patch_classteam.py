@@ -193,12 +193,36 @@ def patch_teammenu(src, dst):
     write(dst, apply_fonts(t))
 
 
+# class select: groups of class buttons, left x of the first button (HUD units from the centre)
+CLASS_GROUPS = (("Offense", -300, 3), ("Defense", -110, 3), ("Support", 78, 3), ("Random", 250, 1))
+CLASS_BUTTONS = ("random", "scout", "soldier", "pyro", "demoman", "heavyweapons", "engineer", "medic", "sniper", "spy")
+BUTTON_W = 50
+
+
 def patch_classselection(src, dst):
     t = read(src)
     t = edit_block(t, "MenuBG", hide_model)
     t = edit_block(t, "ShadedBar", flat_bar)
-    t = append(t, new_panel("MerScrim", "0", "0", "f0", "480", SCRIM, z="0"))
-    write(dst, apply_fonts(t))
+
+    # click targets: hover/press highlight and Meridian key-hint colours
+    for n in CLASS_BUTTONS:
+        t = edit_block(t, n, lambda b: place(
+            paintbackground="1", defaultBgColor_override="0 0 0 0", armedBgColor_override=HOVER,
+            depressedBgColor_override=PRESS, fgcolor=DIM, defaultFgColor_override=DIM,
+            armedFgColor_override=TEXT, depressedFgColor_override=TEXT)(b))
+    for n in ("Offense", "Defense", "Support"):
+        t = edit_block(t, n, lambda b: place(fgcolor=DIM, textAlignment="center", wide=str(BUTTON_W * 3), zpos="2")(b))
+    t = edit_block(t, "ClassMenuSelect", label("30", "r40", "450", "30", "MerTitle", align="west", zpos="6"))
+
+    extra = new_panel("MerScrim", "0", "0", "f0", "480", SCRIM, z="0")
+    for name, x, n in CLASS_GROUPS:
+        w = n * BUTTON_W + 12
+        extra += new_panel("MerClassCard" + name, c(x - 6), "0", str(w), "114", CARD, z="1")
+        extra += new_panel("MerClassCard%sEdge" % name, c(x - 6), "0", str(w), "4", EDGE_NEUTRAL, z="2")
+    # the tips box next to the model
+    extra += new_panel("MerTipsCard", "c20", "c-92", "251", "181", CARD, z="1")
+    extra += new_panel("MerTipsCardEdge", "c20", "c-92", "251", "4", EDGE_NEUTRAL, z="2")
+    write(dst, apply_fonts(append(t, extra)))
 
 
 def patch_tips(src, dst):

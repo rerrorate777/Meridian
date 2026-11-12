@@ -35,11 +35,7 @@
 		"ControlName"		"CExImageButton"
 		"fieldName"			"random"
 		"xpos"				"c250"
-		"xpos_lodef"				"c217"
-		"xpos_hidef"				"c238"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -58,16 +54,16 @@
 		"image_default"		"class_sel_sm_random_inactive"
 		"image_armed"		"class_sel_sm_random_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -91,6 +87,9 @@
 			"image"			"class_sel_sm_random_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 		
 	"Offense"
@@ -98,25 +97,20 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"Offense"
 		"xpos"			"c-300"
-		"xpos_hidef"			"c-287"
-		"xpos_lodef"	"c-260"
 		"ypos"			"96"
-		"ypos_hidef"			"102"
-		"ypos_lodef"	"116"
 		"zpos"			"2"
-		"wide"			"90"
+		"wide"			"150"
 		"tall"			"12"
-		"tall_lodef"			"22"
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
 		"labelText"		"#TF_Offense"
-		"textAlignment"	"left"
+		"textAlignment"	"center"
 		"font"			"MerBody"
 		"font_lodef"			"MenuMainTitle"
-		"fgcolor"		"TanDark"
+		"fgcolor"		"150 160 172 255"
 		"fgcolor_lodef"	"TanLight"
 	}
 	"scout"
@@ -124,11 +118,7 @@
 		"ControlName"		"CExImageButton"
 		"fieldName"			"scout"
 		"xpos"				"c-300"
-		"xpos_hidef"				"c-290"
-		"xpos_lodef"		"c-265"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -148,17 +138,17 @@
 		"image_default"		"class_sel_sm_scout_inactive"
 		"image_armed"		"class_sel_sm_scout_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		"selectedFgColor_override" "TanDark"
 			
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -182,17 +172,16 @@
 			"image"			"class_sel_sm_scout_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	"soldier"
 	{
 		"ControlName"		"CExImageButton"
 		"fieldName"			"soldier"
 		"xpos"				"c-250"
-		"xpos_hidef"				"c-244"
-		"xpos_lodef"		"c-225"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -212,17 +201,17 @@
 		"image_default"		"class_sel_sm_soldier_inactive"
 		"image_armed"		"class_sel_sm_soldier_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		"selectedFgColor_override" "TanDark"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -246,17 +235,16 @@
 			"image"			"class_sel_sm_soldier_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	"pyro"
 	{
 		"ControlName"		"CExImageButton"
 		"fieldName"			"pyro"
 		"xpos"				"c-200"
-		"xpos_hidef"				"c-194"
-		"xpos_lodef"		"c-180"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -276,16 +264,16 @@
 		"image_default"		"class_sel_sm_pyro_inactive"
 		"image_armed"		"class_sel_sm_pyro_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -309,6 +297,9 @@
 			"image"			"class_sel_sm_pyro_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	
 	"Defense"
@@ -316,25 +307,20 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"Defense"
 		"xpos"			"c-110"
-		"xpos_hidef"			"c-105"
-		"xpos_lodef"	"c-95"
 		"ypos"			"96"
-		"ypos_hidef"			"102"
-		"ypos_lodef"	"116"
 		"zpos"			"2"
-		"wide"			"90"
+		"wide"			"150"
 		"tall"			"12"
-		"tall_lodef"			"22"
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
 		"labelText"		"#TF_Defense"
-		"textAlignment"	"left"
+		"textAlignment"	"center"
 		"font"			"MerBody"
 		"font_lodef"			"MenuMainTitle"
-		"fgcolor"		"TanDark"
+		"fgcolor"		"150 160 172 255"
 		"fgcolor_lodef"	"TanLight"
 	}
 	"demoman"
@@ -342,10 +328,7 @@
 		"ControlName"		"CExImageButton"
 		"fieldName"			"demoman"
 		"xpos"				"c-110"
-		"xpos_lodef"		"c-100"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -365,16 +348,16 @@
 		"image_default"		"class_sel_sm_demo_inactive"
 		"image_armed"		"class_sel_sm_demo_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -398,16 +381,16 @@
 			"image"			"class_sel_sm_demo_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}	
 	"heavyweapons"
 	{
 		"ControlName"		"CExImageButton"
 		"fieldName"			"heavyweapons"
 		"xpos"				"c-60"
-		"xpos_lodef"		"c-55"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -427,16 +410,16 @@
 		"image_default"		"class_sel_sm_heavy_inactive"
 		"image_armed"		"class_sel_sm_heavy_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -460,6 +443,9 @@
 			"image"			"class_sel_sm_heavy_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	"engineer"
 	{
@@ -467,8 +453,6 @@
 		"fieldName"			"engineer"
 		"xpos"				"c-10"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -488,16 +472,16 @@
 		"image_default"		"class_sel_sm_engineer_inactive"
 		"image_armed"		"class_sel_sm_engineer_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -521,6 +505,9 @@
 			"image"			"class_sel_sm_engineer_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	
 	"Support"
@@ -528,25 +515,20 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"Support"
 		"xpos"			"c76"
-		"xpos_hidef"			"c74"
-		"xpos_lodef"	"c70"
 		"ypos"			"96"
-		"ypos_hidef"			"102"
-		"ypos_lodef"	"116"
 		"zpos"			"2"
-		"wide"			"90"
+		"wide"			"150"
 		"tall"			"12"
-		"tall_lodef"			"22"
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
 		"labelText"		"#TF_Support"
-		"textAlignment"	"left"
+		"textAlignment"	"center"
 		"font"			"MerBody"
 		"font_lodef"			"MenuMainTitle"
-		"fgcolor"		"TanDark"
+		"fgcolor"		"150 160 172 255"
 		"fgcolor_lodef"	"TanLight"
 	}
 	"medic"
@@ -554,11 +536,7 @@
 		"ControlName"		"CExImageButton"
 		"fieldName"			"medic"
 		"xpos"				"c78"
-		"xpos_hidef"				"c70"
-		"xpos_lodef"		"c65"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -578,16 +556,16 @@
 		"image_default"		"class_sel_sm_medic_inactive"
 		"image_armed"		"class_sel_sm_medic_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -611,17 +589,16 @@
 			"image"			"class_sel_sm_medic_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	"sniper"
 	{
 		"ControlName"		"CExImageButton"
 		"fieldName"			"sniper"
 		"xpos"				"c128"
-		"xpos_hidef"				"c120"
-		"xpos_lodef"		"c105"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -641,16 +618,16 @@
 		"image_default"		"class_sel_sm_sniper_inactive"
 		"image_armed"		"class_sel_sm_sniper_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -674,17 +651,16 @@
 			"image"			"class_sel_sm_sniper_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}
 	"spy"
 	{
 		"ControlName"		"CExImageButton"
 		"fieldName"			"spy"
 		"xpos"				"c178"
-		"xpos_hidef"				"c170"
-		"xpos_lodef"		"c145"
 		"ypos"				"-5"
-		"ypos_lodef"				"9"
-		"ypos_hidef"				"0"
 		"zpos"				"6"
 		"wide"				"50"
 		"tall"				"100"
@@ -704,16 +680,16 @@
 		"image_default"		"class_sel_sm_spy_inactive"
 		"image_armed"		"class_sel_sm_spy_inactive"
 		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
+		"fgcolor"			"150 160 172 255"
+		"defaultFgColor_override" "150 160 172 255"
+		"armedFgColor_override" "MerText"
+		"depressedFgColor_override" "MerText"
 		
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 		"sound_armed"		"UI/buttonrollover.wav"
 		
-		"paintbackground"	"0"
+		"paintbackground"	"1"
 		
 		"image_drawcolor"		"255 255 255 180"
 		"image_armedcolor"		"255 255 255 255"
@@ -737,6 +713,9 @@
 			"image"			"class_sel_sm_spy_inactive"
 			"scaleImage"	"1"
 		}				
+		"defaultBgColor_override"		"0 0 0 0"
+		"armedBgColor_override"		"255 255 255 7"
+		"depressedBgColor_override"		"255 255 255 16"
 	}	
 
 	"CancelButton" [$WIN32] 
@@ -805,23 +784,18 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"ClassMenuSelect"
 		"xpos"			"30"
-		"xpos_lodef"			"62"
-		"xpos_hidef"			"72"
 		"ypos"			"r40"
-		"ypos_lodef"			"r60"
-		"ypos_hidef"			"r54"
-		"zpos"			"5"
+		"zpos"			"6"
 		"wide"			"450"
 		"tall"			"30"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
-		"visible_lodef"	"0"
 		"enabled"		"1"
 		"labelText"		"#TF_SelectAClass"
 		"textAlignment"	"west"
 		"font"			"MerTitle"
-		"fgcolor"		"HudOffWhite"
+		"fgcolor"		"MerText"
 	}
 	
 	"MenuBG"
@@ -1778,5 +1752,145 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"fillcolor"		"8 10 14 225"
+	}
+
+	"MerClassCardOffense"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardOffense"
+		"xpos"			"c-306"
+		"ypos"			"0"
+		"zpos"			"1"
+		"wide"			"162"
+		"tall"			"114"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"12 14 18 225"
+	}
+
+	"MerClassCardOffenseEdge"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardOffenseEdge"
+		"xpos"			"c-306"
+		"ypos"			"0"
+		"zpos"			"2"
+		"wide"			"162"
+		"tall"			"4"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"150 160 172 255"
+	}
+
+	"MerClassCardDefense"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardDefense"
+		"xpos"			"c-116"
+		"ypos"			"0"
+		"zpos"			"1"
+		"wide"			"162"
+		"tall"			"114"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"12 14 18 225"
+	}
+
+	"MerClassCardDefenseEdge"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardDefenseEdge"
+		"xpos"			"c-116"
+		"ypos"			"0"
+		"zpos"			"2"
+		"wide"			"162"
+		"tall"			"4"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"150 160 172 255"
+	}
+
+	"MerClassCardSupport"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardSupport"
+		"xpos"			"c72"
+		"ypos"			"0"
+		"zpos"			"1"
+		"wide"			"162"
+		"tall"			"114"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"12 14 18 225"
+	}
+
+	"MerClassCardSupportEdge"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardSupportEdge"
+		"xpos"			"c72"
+		"ypos"			"0"
+		"zpos"			"2"
+		"wide"			"162"
+		"tall"			"4"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"150 160 172 255"
+	}
+
+	"MerClassCardRandom"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardRandom"
+		"xpos"			"c244"
+		"ypos"			"0"
+		"zpos"			"1"
+		"wide"			"62"
+		"tall"			"114"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"12 14 18 225"
+	}
+
+	"MerClassCardRandomEdge"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerClassCardRandomEdge"
+		"xpos"			"c244"
+		"ypos"			"0"
+		"zpos"			"2"
+		"wide"			"62"
+		"tall"			"4"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"150 160 172 255"
+	}
+
+	"MerTipsCard"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerTipsCard"
+		"xpos"			"c20"
+		"ypos"			"c-92"
+		"zpos"			"1"
+		"wide"			"251"
+		"tall"			"181"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"12 14 18 225"
+	}
+
+	"MerTipsCardEdge"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"MerTipsCardEdge"
+		"xpos"			"c20"
+		"ypos"			"c-92"
+		"zpos"			"2"
+		"wide"			"251"
+		"tall"			"4"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"150 160 172 255"
 	}
 }
