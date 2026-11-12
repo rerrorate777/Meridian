@@ -67,6 +67,7 @@ health dock shows the 2D class icon; with the stock setting (`1`) TF2 draws the
 | Top bar (chat, party slots, Find a Game / Resume / Disconnect / Quit) and the Find a Game screens: mode selection, Casual, Competitive, MvM, lobbies | `resource/ui/matchmaking*.res`, `lobby*.res`, `mainmenuplaylistentry.res`... (tools/patch_matchmaking.py) |
 | The four image buttons at the top right of the main menu (alerts, stream, quests, MOTD): recoloured textures, same names | `materials/vgui/button_{alert,streaming,quests_pda,motd}.vtf` (tools/gen_menu_icons.py) |
 | Loadout screens (class picker, class page, item picker, backpack, the "New Item Acquired" drop screen): flat header/footer/dividers, dark item tiles (quality tints kept), search box | `resource/ui/charinfo*.res`, `classloadoutpanel.res`, `itemselectionpanel.res`, `econ/**`, `BackpackItemBorder*` in `resource/clientscheme.res` (tools/patch_loadout.py) |
+| Control point icons (bottom centre) and the Sudden Death box: flat team-coloured squares, Meridian fonts, flat panel with an accent line | `materials/sprites/obj_icons/*.vtf` (tools/gen_cp_icons.py), `resource/ui/controlpoint{icon,countdown}.res`, `hudstalemate.res` (tools/patch_hudmisc.py) |
 | Dialogs (Options, server browser, popups): dark buttons, tabs, lists, selection | `resource/sourcescheme.res` (colours only; fonts stay stock) |
 | Team select (three flat cards) and class select (dark scrim, Meridian text, class tips) | `resource/ui/teammenu*.res`, `classselection*.res`, `classtipsitem.res` |
 | Message of the day (the chalkboard shown when joining a server): dark card instead of the 3D chalkboard scene | `resource/ui/textwindow*.res` |
@@ -126,6 +127,8 @@ python3 tools/patch_menus.py STOCK/resource/ui                    meridian
 python3 tools/patch_loadout.py STOCK/resource/ui                  meridian/resource/ui   # also needs econ/*.res extracted
 python3 tools/patch_matchmaking.py STOCK/resource/ui              meridian/resource/ui
 python3 tools/gen_menu_icons.py .../tf/tf2_textures_dir.vpk       meridian   # recolour the 4 top-right icon buttons
+python3 tools/gen_cp_icons.py .../tf/tf2_textures_dir.vpk         meridian   # recolour the control point icons
+python3 tools/patch_hudmisc.py STOCK/resource/ui                   meridian/resource/ui
 python3 tools/patch_sourcescheme.py STOCK/resource/sourcescheme.res meridian/resource/sourcescheme.res
 python3 tools/patch_classteam.py STOCK/resource/ui                meridian/resource/ui
 python3 tools/patch_scoreboard.py STOCK/resource/ui               meridian
