@@ -10,7 +10,8 @@ dark scrim replaces them.
   * teammenu.res / teammenu_sc.res        three flat cards (Random, BLU, RED) plus a Spectate button
   * classselection.res / _sc.res          scrim instead of the classroom, flat bottom bar
   * classtipsitem.res                     the class tips drop the chalkboard font
-  * textwindow.res / _sc.res              the message-of-the-day window (chalkboard scene -> dark card)
+  * textwindow*.res, mapinfomenu*.res,   the message-of-the-day, map info, intro and round info windows
+    intromenu*.res, roundinfo.res          (chalkboard scene -> dark scrim, flat buttons)
   * all                                   Meridian fonts and text colours
 
 Every edit must match exactly once, otherwise the script aborts (see patch_layout.py).
@@ -112,10 +113,12 @@ def label(x, y, w, h, font, color=TEXT, align="center", **extra):
 
 
 def flat_button(cancel=False):
-    """Footer button: flat dark fill (lighter on hover/press) in the Meridian font, no stock border."""
+    """Menu button: flat dark fill (lighter on hover/press), the Meridian font and the footer-button
+    accent (square, 2px left line; MerButtonBorder in clientscheme.res)."""
     def fn(b):
-        kw = dict(paintbackground="1", paintborder="0", font="MerBody",
-                  border_default="NoBorder", border_armed="NoBorder", border_depressed="NoBorder",
+        kw = dict(paintbackground="1", paintborder="1", PaintBackgroundType="0", font="MerBody",
+                  border_default="MerButtonBorder", border_armed="MerButtonBorderArmed",
+                  fgcolor=CANCEL_TEXT if cancel else TEXT,
                   defaultBgColor_override=BTN, armedBgColor_override=BTN_ARMED,
                   depressedBgColor_override=BTN_PRESSED,
                   defaultFgColor_override=CANCEL_TEXT if cancel else TEXT,
@@ -286,6 +289,50 @@ def patch_motd(src, dst):
     write(dst, apply_fonts(append(t, extra)))
 
 
+def window(t, buttons, labels=(), card=None, bar=True):
+    """Common treatment of the chalkboard-scene windows: shrink the 3D model, flat bottom bar, flat
+    buttons, Meridian label fonts, a scrim and (optionally) a card behind the content."""
+    t = edit_block(t, "MenuBG", hide_model)
+    if bar:
+        t = edit_block(t, "ShadedBar", flat_bar)
+    for n in buttons:
+        t = edit_block(t, n, flat_button())
+    for n, font, color in labels:
+        t = edit_block(t, n, lambda b, font=font, color=color: place(font=font, fgcolor=color, zpos="5")(b))
+    extra = new_panel("MerScrim", "0", "0", "f0", "480", SCRIM, z="0")
+    if card:
+        x, y, w, h = card
+        extra += new_panel("MerCard", x, y, w, h, CARD, z="1") + new_panel("MerCardEdge", x, y, w, "4", EDGE_NEUTRAL, z="2")
+    return apply_fonts(append(t, extra))
+
+
+def patch_customserver(src, dst):
+    """The server's own (HTML) MOTD page: the page fills the screen, so no card."""
+    t = read(src)
+    t = window(t, ["ok"], [("TFMessageTitle", "MerTitle", TEXT), ("TFTextMessage", "MerBody", TEXT)])
+    write(dst, t)
+
+
+def patch_mapinfo(src, dst):
+    t = read(src)
+    t = window(t, ["MapInfoContinue", "MapInfoWatchIntro", "MapInfoBack"],
+               [("MapInfoTitle", "MerTitle", TEXT), ("MapInfoType", "MerBody", DIM), ("MapInfoText", "MerBody", TEXT)],
+               card=("c-200", "68", "497", "312"))
+    write(dst, t)
+
+
+def patch_intro(src, dst):
+    t = read(src)
+    t = window(t, ["Skip", "Continue", "Back", "ReplayVideo"])
+    write(dst, t)
+
+
+def patch_roundinfo(src, dst):
+    t = read(src)
+    t = window(t, ["RoundContinue"], [("Title", "MerTitle", TEXT), ("Mapname", "MerTitle", TEXT)])
+    write(dst, t)
+
+
 def patch_tips(src, dst):
     t = read(src)
     t = sub1(r'(\n\t\t\t"font"\s*)"ChalkboardText"', r'\1"MerBody"\n\t\t\t"fgcolor"\t\t\t"%s"' % TEXT, t, "classtips.font")
@@ -298,7 +345,11 @@ def main():
     stock, mer = sys.argv[1], sys.argv[2]
     for name, fn in (("teammenu.res", patch_teammenu), ("teammenu_sc.res", patch_teammenu),
                      ("classselection.res", patch_classselection), ("classselection_sc.res", patch_classselection),
-                     ("classtipsitem.res", patch_tips), ("textwindow.res", patch_motd), ("textwindow_sc.res", patch_motd)):
+                     ("classtipsitem.res", patch_tips), ("textwindow.res", patch_motd), ("textwindow_sc.res", patch_motd),
+                     ("textwindowcustomserver.res", patch_customserver), ("textwindowcustomserver_sc.res", patch_customserver),
+                     ("mapinfomenu.res", patch_mapinfo), ("mapinfomenu_sc.res", patch_mapinfo),
+                     ("intromenu.res", patch_intro), ("intromenu_sc.res", patch_intro),
+                     ("roundinfo.res", patch_roundinfo)):
         fn(os.path.join(stock, name), os.path.join(mer, name))
         print("patched", name)
 
