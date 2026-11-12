@@ -4,20 +4,6 @@ A flat, low-clutter HUD for Team Fortress 2, laid out for 16:10 displays
 (1280×800, 1440×900, 1680×1050, 1920×1200, 2560×1600) and installed with one
 Linux-friendly script.
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                                                  kill feed (top-right)
-│                                                                  │
-│                                                                  │
-│ chat                          ┌ target ID ┐                      │
-│                               └───────────┘                      │
-│ spy disguise                                      ┌ uber / metal ┐
-│ status icons                                      └──────────────┘
-│ ┌ class │  125  ┐              ┌ item ┐        ┌ 6    32  ┐ │
-│ └───────────────────┘              └──────┘        └──ammo────┘ │
-└──────────────────────────────────────────────────────────────────┘
-   health dock (bottom-left)                    ammo dock (bottom-right)
-```
 
 Everything sits 20 HUD units in from the screen edges, and all docks share one
 baseline (y = 412–460 of 480).
