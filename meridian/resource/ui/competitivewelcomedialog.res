@@ -273,6 +273,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"TakeTourButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"proportionalToParent"  "1"
 		"xpos"			"rs1-170"
 		"ypos"			"352" // 4 margin
@@ -294,8 +298,6 @@
 		"Command"		"show_explanations"
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"			"Econ.Button.Border.Default"
-		"border_armed"				"Econ.Button.Border.Armed"
 		"armedBgColor_override"		"Econ.Button.ArmedBgColor"
 		"armedFgColor_override"		"Econ.Button.ArmedFgColor"
 		"depressedBgColor_override"	"Econ.Button.DepressedBgColor"
@@ -306,6 +308,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"ConfirmButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"proportionalToParent"  "1"
 		"xpos"			"rs1-10"
 		"ypos"			"352" // 4 margin
@@ -327,8 +333,6 @@
 		"Command"		"confirm"
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"			"Econ.Button.Border.Default"
-		"border_armed"				"Econ.Button.Border.Armed"
 		"armedBgColor_override"		"Econ.Button.ArmedBgColor"
 		"armedFgColor_override"		"Econ.Button.ArmedFgColor"
 		"depressedBgColor_override"	"Econ.Button.DepressedBgColor"

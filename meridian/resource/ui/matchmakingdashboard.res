@@ -547,6 +547,10 @@
 			{
 				"ControlName"	"CExButton"
 				"fieldName"		"JoinNowButton"
+				"border_default"		"MerButtonBorder"
+				"border_armed"		"MerButtonBorderArmed"
+				"paintborder"		"1"
+				"PaintBackgroundType"		"0"
 				"xpos"			"rs1-10"
 				"ypos"			"rs1-9"
 				"wide"			"40"

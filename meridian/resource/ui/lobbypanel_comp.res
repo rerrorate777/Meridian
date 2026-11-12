@@ -53,6 +53,10 @@
 		{
 			"ControlName"	"CExButton"
 			"fieldName"		"ShowLeaderboardsButton"
+			"border_default"		"MerButtonBorder"
+			"border_armed"		"MerButtonBorderArmed"
+			"paintborder"		"1"
+			"PaintBackgroundType"		"0"
 			"xpos"			"rs1-10"
 			"ypos"			"6"
 			"zpos"			"0"
@@ -77,6 +81,10 @@
 		{
 			"ControlName"	"Button"
 			"fieldName"		"ShowMatchHistoryButton"
+			"border_default"		"MerButtonBorder"
+			"border_armed"		"MerButtonBorderArmed"
+			"paintborder"		"1"
+			"PaintBackgroundType"		"0"
 			"xpos"			"10"
 			"ypos"			"6"
 			"zpos"			"0"

@@ -102,6 +102,10 @@
 			{
 				"ControlName"	"CExButton"
 				"fieldName"		"AbandonButton"
+				"border_default"		"MerButtonBorder"
+				"border_armed"		"MerButtonBorderArmed"
+				"paintborder"		"1"
+				"PaintBackgroundType"		"0"
 				"xpos"			"rs1-10"
 				"ypos"			"rs1-5"
 				"zpos"			"100"
@@ -133,6 +137,10 @@
 			{
 				"ControlName"	"CExButton"
 				"fieldName"		"SmallJoinButton"
+				"border_default"		"MerButtonBorder"
+				"border_armed"		"MerButtonBorderArmed"
+				"paintborder"		"1"
+				"PaintBackgroundType"		"0"
 				"xpos"			"10"
 				"ypos"			"rs1-5"
 				"wide"			"90"
@@ -172,6 +180,10 @@
 			{
 				"ControlName"	"CExButton"
 				"fieldName"		"WideJoinButton"
+				"border_default"		"MerButtonBorder"
+				"border_armed"		"MerButtonBorderArmed"
+				"paintborder"		"1"
+				"PaintBackgroundType"		"0"
 				"xpos"			"cs-0.5"
 				"ypos"			"rs1-5"
 				"wide"			"150"

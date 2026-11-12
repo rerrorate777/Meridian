@@ -56,6 +56,10 @@
 		{
 			"ControlName"	"CExImageButton"
 			"fieldName"		"RestoreCasualSearchCriteria"
+			"border_default"		"MerButtonBorder"
+			"border_armed"		"MerButtonBorderArmed"
+			"paintborder"		"1"
+			"PaintBackgroundType"		"0"
 			"xpos"			"rs1-49"
 			"ypos"			"49"
 			"zpos"			"100"
@@ -99,6 +103,10 @@
 		{
 			"ControlName"	"CExImageButton"
 			"fieldName"		"SaveCasualSearchCriteria"
+			"border_default"		"MerButtonBorder"
+			"border_armed"		"MerButtonBorderArmed"
+			"paintborder"		"1"
+			"PaintBackgroundType"		"0"
 			"xpos"			"rs1-29"
 			"ypos"			"49"
 			"zpos"			"100"
@@ -142,6 +150,10 @@
 		{
 			"ControlName"	"CExButton"
 			"fieldName"		"ShowExplanationsButton"
+			"border_default"		"MerButtonBorder"
+			"border_armed"		"MerButtonBorderArmed"
+			"paintborder"		"1"
+			"PaintBackgroundType"		"0"
 			"xpos"			"rs1-9"
 			"ypos"			"49"
 			"zpos"			"100"

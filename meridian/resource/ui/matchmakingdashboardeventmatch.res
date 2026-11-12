@@ -216,6 +216,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"QueueButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"cs-0.5"
 		"ypos"			"rs1-8"
 		"zpos"			"100"

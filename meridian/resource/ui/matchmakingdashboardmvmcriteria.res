@@ -33,6 +33,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"BackButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"6"
 		"ypos"			"rs1-8"
 		"zpos"			"100"
@@ -79,6 +83,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"MannUpQueueButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"106"
 		"ypos"			"rs1-8"
 		"zpos"			"100"
@@ -128,6 +136,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"BootCampQueueButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"5"
 		"ypos"			"rs1-8"
 		"zpos"			"100"

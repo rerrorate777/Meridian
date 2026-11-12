@@ -31,6 +31,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"SelectButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"cs-0.5"
 		"ypos"			"13"
 		"wide"			"44"

@@ -73,6 +73,67 @@ def generic(t):
     return t
 
 
+# Buttons that get the footer-button style (square, flat, 2px accent line on the left, from the
+# MerButtonBorder / MerButtonBorderArmed borders in clientscheme.res). Image-only buttons (close,
+# next/prev arrows, checkboxes) are left alone.
+STYLED_BUTTONS = {
+    "QueueButton", "MannUpQueueButton", "BootCampQueueButton", "PlayNowButton", "PracticeButton", "LearnMoreButton",
+    "StartPartyButton", "OptionsButton", "SearchButton", "StopSearchButton", "RematchButton", "RequeueButton",
+    "LeavePartyButton", "LeaveQueueButton", "AbandonButton", "JoinNowButton", "SmallJoinButton", "WideJoinButton",
+    "SelectButton", "ShowLeaderboardsButton", "ShowMatchHistoryButton", "RestoreCasualSearchCriteria",
+    "SaveCasualSearchCriteria", "ShowExplanationsButton", "TakeTourButton", "ConfirmButton", "ModeButton",
+    "MannUpNowButton", "BackButton",
+}
+BUTTON_KEYS = {"border_default": "MerButtonBorder", "border_armed": "MerButtonBorderArmed",
+               "paintborder": "1", "PaintBackgroundType": "0"}
+_BUTTON_KEY_RE = re.compile(r'\n[ \t]*"(?:border_default|border_armed|border_depressed|paintborder|PaintBackgroundType)"[^\n]*')
+
+
+def match_brace(t, i):
+    """Index just past the } matching the { at t[i]."""
+    depth = 0
+    k = i
+    while k < len(t):
+        c = t[k]
+        if c == '"':
+            k = t.index('"', k + 1)
+        elif c == "/" and t.startswith("//", k):
+            k = t.index("\n", k)
+        elif c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                return k + 1
+        k += 1
+    raise SystemExit("unbalanced braces")
+
+
+def style_buttons(t):
+    """Apply BUTTON_KEYS to every button block named in STYLED_BUTTONS (any nesting depth)."""
+    out, pos, count = [], 0, 0
+    pat = re.compile(r'"ControlName"\s*"(?:CExButton|CExImageButton|CTFButton|Button)"\s*\n\s*"fieldName"\s*"([^"]*)"[^\n]*', re.I)
+    for m in pat.finditer(t):
+        if m.group(1) not in STYLED_BUTTONS or m.start() < pos:
+            continue
+        open_i = t.rindex("{", 0, m.start())
+        close_i = match_brace(t, open_i)
+        blk = t[open_i:close_i]
+        child = blk.find("{", 1)
+        head, tail = (blk[:child], blk[child:]) if child != -1 else (blk, "")
+        head = _BUTTON_KEY_RE.sub("", head)
+        ind = re.search(r'\n([ \t]*)"ControlName"', head)
+        ind = ind.group(1) if ind else "\t\t"  # ControlName on the same line as the brace
+        add = "".join('\n%s"%s"\t\t"%s"' % (ind, k, v) for k, v in BUTTON_KEYS.items())
+        fm = re.search(r'"fieldName"[^\n]*', head)
+        head = head[:fm.end()] + add + head[fm.end():]
+        out.append(t[pos:open_i] + head + tail)
+        pos = close_i
+        count += 1
+    out.append(t[pos:])
+    return "".join(out), count
+
+
 def block(text, name, indent="\t"):
     m = re.search(r'\n%s"?%s"?\s*(?:\[[^\]]*\])?\s*\n%s\{.*?\n%s\}' % (indent, re.escape(name), indent, indent), text, re.S)
     if not m:
@@ -119,7 +180,7 @@ def main():
     if len(sys.argv) != 3:
         raise SystemExit(__doc__)
     stock, mer = sys.argv[1], sys.argv[2]
-    n = 0
+    n = styled = 0
     for path in sorted(glob.glob(os.path.join(stock, "*.res"))):
         name = os.path.basename(path)
         if not FILE_RE.match(name):
@@ -128,10 +189,12 @@ def main():
         out = generic(t)
         if name == "matchmakingdashboard.res":
             out = topbar(out)
+        out, nb = style_buttons(out)
+        styled += nb
         if out != t:
             write(os.path.join(mer, name), out)
             n += 1
-    print("patched %d files" % n)
+    print("patched %d files, %d buttons styled" % (n, styled))
 
 
 if __name__ == "__main__":

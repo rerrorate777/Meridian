@@ -148,6 +148,10 @@
 			{
 				"ControlName"	"CExImageButton"
 				"fieldName"		"SearchButton"
+				"border_default"		"MerButtonBorder"
+				"border_armed"		"MerButtonBorderArmed"
+				"paintborder"		"1"
+				"PaintBackgroundType"		"0"
 				"xpos"			"70"
 				"ypos"			"295"
 				"zpos"			"2"
@@ -172,6 +176,10 @@
 			{
 				"ControlName"	"CExButton"
 				"fieldName"		"StopSearchButton"
+				"border_default"		"MerButtonBorder"
+				"border_armed"		"MerButtonBorderArmed"
+				"paintborder"		"1"
+				"PaintBackgroundType"		"0"
 				"xpos"			"70"
 				"ypos"			"295"
 				"zpos"			"2"

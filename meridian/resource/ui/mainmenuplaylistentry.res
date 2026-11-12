@@ -86,6 +86,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"ModeButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"rs1-6"
 		"ypos"			"2"
 		"zpos"			"6"

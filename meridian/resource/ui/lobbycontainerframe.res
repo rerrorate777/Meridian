@@ -119,6 +119,10 @@
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"OptionsButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c275"
 		"ypos"			"10"
 		"zpos"			"100"
@@ -161,6 +165,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"BackButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c-305"
 		"ypos"			"437"
 		"zpos"			"2"
@@ -264,6 +272,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"StartPartyButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c+110"
 		"ypos"			"310"
 		"zpos"			"10"

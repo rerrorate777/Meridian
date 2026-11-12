@@ -36,6 +36,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"ShowExplanationsButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"rs1-21"
 		"ypos"			"20"
 		"zpos"			"100"
@@ -109,6 +113,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"QueueButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"cs-0.5"
 		"ypos"			"rs1-8"
 		"zpos"			"100"

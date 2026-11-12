@@ -525,6 +525,10 @@
 		{
 			"ControlName"	"CExButton"
 			"fieldName"		"MannUpNowButton"
+			"border_default"		"MerButtonBorder"
+			"border_armed"		"MerButtonBorderArmed"
+			"paintborder"		"1"
+			"PaintBackgroundType"		"0"
 			"xpos"			"10"
 			"ypos"			"85"
 			"zpos"			"2"

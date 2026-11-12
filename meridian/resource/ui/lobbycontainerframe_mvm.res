@@ -6,6 +6,10 @@
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"OptionsButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"visible"	"0"
 	}
 	
@@ -13,6 +17,10 @@
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"LearnMoreButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c106"
 		"ypos"			"385"
 		"zpos"			"2"
@@ -42,6 +50,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"PlayNowButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c-295"
 		"ypos"			"303"
 		"zpos"			"20"
@@ -68,8 +80,6 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 
-		"border_default"	"MainMenuButtonDefault"
-		"border_armed"		"MainMenuButtonArmed"
 		"paintbackground"	"0"
 			
 		"defaultFgColor_override" "236 240 244 255"
@@ -81,6 +91,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"PracticeButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c-95"
 		"ypos"			"303"
 		"zpos"			"20"
@@ -107,8 +121,6 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 
-		"border_default"	"MainMenuButtonDefault"
-		"border_armed"		"MainMenuButtonArmed"
 		"paintbackground"	"0"
 			
 		"defaultFgColor_override" "236 240 244 255"

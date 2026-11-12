@@ -76,6 +76,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"ConfirmButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"62"
 		"ypos"			"rs1-15"
 		"zpos"			"20"

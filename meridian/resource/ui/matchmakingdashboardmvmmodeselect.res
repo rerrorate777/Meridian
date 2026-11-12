@@ -99,6 +99,10 @@
 		{
 			//"ControlName"	"CExButton"
 			"fieldName"		"PlayNowButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 			"xpos"			"cs-0.5"
 			"ypos"			"rs1-5"
 			"zpos"			"20"
@@ -220,6 +224,10 @@
 		{
 			//"ControlName"	"CExButton"
 			"fieldName"		"PracticeButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 			"xpos"			"cs-0.5"
 			"ypos"			"rs1-5"
 			"zpos"			"20"
