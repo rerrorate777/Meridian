@@ -25,7 +25,7 @@
 		"xpos"			"0"
 		"ypos"			"80"
 		"zpos"			"1"
-		"wide"			"148"
+		"wide"			"108"
 		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
@@ -58,9 +58,9 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
-		"image"			"../hud/mer_blue"
-		"teambg_2"		"../hud/mer_red"
-		"teambg_3"		"../hud/mer_blue"
+		"image"			"meridian/mer_blue"
+		"teambg_2"		"meridian/mer_red"
+		"teambg_3"		"meridian/mer_blue"
 	}
 
 	// Unused by this design but looked up by the game, so they stay defined.
@@ -100,11 +100,11 @@
 		"xpos"			"0"
 		"ypos"			"125"
 		"zpos"			"4"
-		"wide"			"148"
+		"wide"			"108"
 		"tall"			"3"
 		"visible"		"0"
 		"enabled"		"1"
-		"image"			"../hud/mer_solid"
+		"image"			"meridian/mer_solid"
 		"scaleImage"	"1"
 	}
 
@@ -115,7 +115,7 @@
 		"xpos"			"52"
 		"ypos"			"80"
 		"zpos"			"5"
-		"wide"			"46"
+		"wide"			"52"
 		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
@@ -125,6 +125,8 @@
 		"fgcolor"		"236 240 244 255"
 	}
 
+	// Unused: TF2 never fills %MaxHealth%, so a max-health readout cannot work.
+	// Kept defined (zero size, hidden) because the game looks it up.
 	"PlayerStatusMaxHealthValue"
 	{
 		"ControlName"	"CExLabel"
@@ -132,14 +134,12 @@
 		"xpos"			"98"
 		"ypos"			"80"
 		"zpos"			"6"
-		"wide"			"48"
-		"tall"			"48"
-		"visible"		"1"
+		"wide"			"0"
+		"tall"			"0"
+		"visible"		"0"
 		"enabled"		"1"
-		"labelText"		"/ %MaxHealth%"
-		"textAlignment"	"west"
+		"labelText"		""
 		"font"			"MerNumberSmall"
-		"fgcolor"		"150 160 172 255"
 	}
 
 	// Status icons are laid out from this anchor, just above the dock.

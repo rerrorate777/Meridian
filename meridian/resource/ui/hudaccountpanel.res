@@ -24,7 +24,8 @@
 		"tall"			"32"
 		"visible"		"1"
 		"enabled"		"1"
-		"fillcolor"		"12 14 18 205"
+		"scaleImage"	"1"
+		"image"			"meridian/mer_panel"
 	}
 
 	"AccountAccent"
@@ -39,9 +40,9 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
-		"image"			"../hud/mer_blue"
-		"teambg_2"		"../hud/mer_red"
-		"teambg_3"		"../hud/mer_blue"
+		"image"			"meridian/mer_blue"
+		"teambg_2"		"meridian/mer_red"
+		"teambg_3"		"meridian/mer_blue"
 	}
 
 	"MetalIcon"

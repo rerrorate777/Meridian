@@ -3037,6 +3037,463 @@ Scheme
 				"antialias" "1"
 			}
 		}
+		// ---- Meridian ----
+		"MerHealth"
+		{
+			"1"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"50"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"56"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"66"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"75"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"100"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"150"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerAmmo"
+		{
+			"1"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"50"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"56"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"66"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"75"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"100"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"150"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerAmmoReserve"
+		{
+			"1"
+			{
+				"name"		"Barlow"
+				"tall"		"25"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow"
+				"tall"		"28"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow"
+				"tall"		"33"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow"
+				"tall"		"38"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow"
+				"tall"		"50"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow"
+				"tall"		"75"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerNumberMed"
+		{
+			"1"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"30"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"34"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"39"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"45"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"60"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"90"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerNumberSmall"
+		{
+			"1"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"22"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"24"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"28"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"32"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"43"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow Condensed"
+				"tall"		"65"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerTitle"
+		{
+			"1"
+			{
+				"name"		"Barlow"
+				"tall"		"22"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow"
+				"tall"		"24"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow"
+				"tall"		"28"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow"
+				"tall"		"32"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow"
+				"tall"		"43"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow"
+				"tall"		"65"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerBody"
+		{
+			"1"
+			{
+				"name"		"Barlow"
+				"tall"		"18"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow"
+				"tall"		"21"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow"
+				"tall"		"24"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow"
+				"tall"		"28"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow"
+				"tall"		"37"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow"
+				"tall"		"55"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
+		"MerLabel"
+		{
+			"1"
+			{
+				"name"		"Barlow"
+				"tall"		"13"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1 849"
+			}
+			"2"
+			{
+				"name"		"Barlow"
+				"tall"		"15"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"850 999"
+			}
+			"3"
+			{
+				"name"		"Barlow"
+				"tall"		"18"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1000 1124"
+			}
+			"4"
+			{
+				"name"		"Barlow"
+				"tall"		"20"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1125 1349"
+			}
+			"5"
+			{
+				"name"		"Barlow"
+				"tall"		"27"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1350 1799"
+			}
+			"6"
+			{
+				"name"		"Barlow"
+				"tall"		"40"
+				"weight"	"700"
+				"additive"	"0"
+				"antialias"	"1"
+				"yres"		"1800 99999"
+			}
+		}
 	}
 
 	//
@@ -5718,463 +6175,6 @@ Scheme
 					"color" "CreditsGreen"
 					"offset" "0 0"
 				}
-			}
-		}
-		// ---- Meridian ----
-		"MerHealth"
-		{
-			"1"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"50"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"56"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"66"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"75"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"100"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"150"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerAmmo"
-		{
-			"1"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"50"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"56"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"66"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"75"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"100"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"150"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerAmmoReserve"
-		{
-			"1"
-			{
-				"name"		"Barlow"
-				"tall"		"25"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow"
-				"tall"		"28"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow"
-				"tall"		"33"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow"
-				"tall"		"38"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow"
-				"tall"		"50"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow"
-				"tall"		"75"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerNumberMed"
-		{
-			"1"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"30"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"34"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"39"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"45"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"60"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"90"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerNumberSmall"
-		{
-			"1"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"22"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"24"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"28"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"32"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"43"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow Condensed"
-				"tall"		"65"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerTitle"
-		{
-			"1"
-			{
-				"name"		"Barlow"
-				"tall"		"22"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow"
-				"tall"		"24"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow"
-				"tall"		"28"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow"
-				"tall"		"32"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow"
-				"tall"		"43"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow"
-				"tall"		"65"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerBody"
-		{
-			"1"
-			{
-				"name"		"Barlow"
-				"tall"		"18"
-				"weight"	"400"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow"
-				"tall"		"21"
-				"weight"	"400"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow"
-				"tall"		"24"
-				"weight"	"400"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow"
-				"tall"		"28"
-				"weight"	"400"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow"
-				"tall"		"37"
-				"weight"	"400"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow"
-				"tall"		"55"
-				"weight"	"400"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
-			}
-		}
-		"MerLabel"
-		{
-			"1"
-			{
-				"name"		"Barlow"
-				"tall"		"13"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1 849"
-			}
-			"2"
-			{
-				"name"		"Barlow"
-				"tall"		"15"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"850 999"
-			}
-			"3"
-			{
-				"name"		"Barlow"
-				"tall"		"18"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1000 1124"
-			}
-			"4"
-			{
-				"name"		"Barlow"
-				"tall"		"20"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1125 1349"
-			}
-			"5"
-			{
-				"name"		"Barlow"
-				"tall"		"27"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1350 1799"
-			}
-			"6"
-			{
-				"name"		"Barlow"
-				"tall"		"40"
-				"weight"	"700"
-				"additive"	"0"
-				"antialias"	"1"
-				"yres"		"1800 99999"
 			}
 		}
 	}

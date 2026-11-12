@@ -70,12 +70,12 @@ def patch_targetid(src, dst):
     def bg(b):
         b = drop_keys(b, corner)
         b = set_key(b, "tall", "40", "TargetIDBG")
-        b = set_key(b, "image", "../hud/mer_panel", "TargetIDBG")
-        b = set_key(b, "teambg_1", "../hud/mer_panel", "TargetIDBG")
-        b = set_key(b, "teambg_2", "../hud/mer_panel_red", "TargetIDBG")
-        b = set_key(b, "teambg_2_lodef", "../hud/mer_panel_red", "TargetIDBG")
-        b = set_key(b, "teambg_3", "../hud/mer_panel_blue", "TargetIDBG")
-        b = set_key(b, "teambg_3_lodef", "../hud/mer_panel_blue", "TargetIDBG")
+        b = set_key(b, "image", "meridian/mer_panel", "TargetIDBG")
+        b = set_key(b, "teambg_1", "meridian/mer_panel", "TargetIDBG")
+        b = set_key(b, "teambg_2", "meridian/mer_panel_red", "TargetIDBG")
+        b = set_key(b, "teambg_2_lodef", "meridian/mer_panel_red", "TargetIDBG")
+        b = set_key(b, "teambg_3", "meridian/mer_panel_blue", "TargetIDBG")
+        b = set_key(b, "teambg_3_lodef", "meridian/mer_panel_blue", "TargetIDBG")
         return b
 
     def spec(img):

@@ -12,7 +12,8 @@
 		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
-		"fillcolor"		"12 14 18 205"
+		"scaleImage"	"1"
+		"image"			"meridian/mer_panel"
 	}
 
 	"HudWeaponAmmoAccent"
@@ -27,9 +28,9 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
-		"image"			"../hud/mer_blue"
-		"teambg_2"		"../hud/mer_red"
-		"teambg_3"		"../hud/mer_blue"
+		"image"			"meridian/mer_blue"
+		"teambg_2"		"meridian/mer_red"
+		"teambg_3"		"meridian/mer_blue"
 	}
 
 	// Pulsing line along the bottom edge when ammo is low (HudLowAmmoPulse).
@@ -44,7 +45,7 @@
 		"tall"			"3"
 		"visible"		"0"
 		"enabled"		"1"
-		"image"			"../hud/mer_alert"
+		"image"			"meridian/mer_alert"
 		"scaleImage"	"1"
 	}
 

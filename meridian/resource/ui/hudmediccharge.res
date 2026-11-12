@@ -12,7 +12,8 @@
 		"tall"			"44"
 		"visible"		"1"
 		"enabled"		"1"
-		"fillcolor"		"12 14 18 205"
+		"scaleImage"	"1"
+		"image"			"meridian/mer_panel"
 	}
 
 	"MedicAccent"
@@ -27,7 +28,7 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
-		"image"			"../hud/mer_uber"
+		"image"			"meridian/mer_uber"
 	}
 
 	"ChargeLabel"

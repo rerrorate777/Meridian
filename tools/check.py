@@ -79,7 +79,7 @@ def main():
             err("not lowercase: " + rel)
 
     scheme = open(os.path.join(ROOT, "resource", "clientscheme.res"), encoding="utf-8", errors="replace").read()
-    fonts_section = scheme[scheme.index("Fonts"):scheme.index("CustomFontFiles")]
+    fonts_section = scheme[scheme.index("\n\tFonts"):scheme.index("\n\tBorders")]  # must not run into Borders
     defined = set(re.findall(r'^\t\t"([^"]+)"\s*$', fonts_section, re.M))
     mer_fonts = {f for f in defined if f.startswith("Mer")}
     if not mer_fonts:
@@ -92,8 +92,8 @@ def main():
             for m in re.finditer(r'"font"\s*"(Mer[^"]+)"', text):
                 if m.group(1) not in defined:
                     err("%s: undefined font %s" % (os.path.relpath(p, ROOT), m.group(1)))
-            for m in re.finditer(r'"(?:image|image_lodef|teambg_\d(?:_lodef)?)"\s*"\.\./hud/(mer_[^"]+)"', text):
-                if not os.path.exists(os.path.join(ROOT, "materials", "hud", m.group(1) + ".vmt")):
+            for m in re.finditer(r'"(?:image|image_lodef|teambg_\d(?:_lodef)?)"\s*"meridian/(mer_[^"]+)"', text):
+                if not os.path.exists(os.path.join(ROOT, "materials", "vgui", "meridian", m.group(1) + ".vmt")):
                     err("%s: missing material %s" % (os.path.relpath(p, ROOT), m.group(1)))
         elif p.endswith(".vtf"):
             d = open(p, "rb").read()

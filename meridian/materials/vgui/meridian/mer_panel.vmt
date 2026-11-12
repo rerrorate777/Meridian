@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture"	"hud/mer_panel_blue"
+	"$basetexture"	"vgui/meridian/mer_panel"
 	"$vertexcolor"	"1"
 	"$vertexalpha"	"1"
 	"$translucent"	"1"

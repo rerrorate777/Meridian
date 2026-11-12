@@ -1,15 +1,16 @@
 "Resource/UI/HudItemEffectMeter.res"
 {
 	// Generic item meter (Sandman, Sandvich, Jarate, Razorback, banners, spy watches...).
-	// Sits in the bottom row, immediately left of the ammo dock.
+	// Sits directly above the ammo dock, the same width, so it never collides with the
+	// class meters (which stack to the left of the ammo dock).
 	HudItemEffectMeter
 	{
 		"fieldName"		"HudItemEffectMeter"
 		"visible"		"1"
 		"enabled"		"1"
-		"xpos"			"r248"
-		"ypos"			"r68"
-		"wide"			"100"
+		"xpos"			"r140"
+		"ypos"			"r120"
+		"wide"			"120"
 		"tall"			"48"
 		"MeterFG"		"236 240 244 255"
 		"MeterBG"		"255 255 255 40"
@@ -22,11 +23,12 @@
 		"xpos"			"0"
 		"ypos"			"0"
 		"zpos"			"0"
-		"wide"			"100"
+		"wide"			"120"
 		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
-		"fillcolor"		"12 14 18 205"
+		"scaleImage"	"1"
+		"image"			"meridian/mer_panel"
 	}
 
 	"ItemEffectMeterAccent"
@@ -41,9 +43,9 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
-		"image"			"../hud/mer_blue"
-		"teambg_2"		"../hud/mer_red"
-		"teambg_3"		"../hud/mer_blue"
+		"image"			"meridian/mer_blue"
+		"teambg_2"		"meridian/mer_red"
+		"teambg_3"		"meridian/mer_blue"
 	}
 
 	"ItemEffectMeterLabel"
@@ -53,7 +55,7 @@
 		"xpos"					"12"
 		"ypos"					"9"
 		"zpos"					"2"
-		"wide"					"82"
+		"wide"					"102"
 		"tall"					"14"
 		"autoResize"			"0"
 		"pinCorner"				"0"
@@ -76,7 +78,7 @@
 		"xpos"					"12"
 		"ypos"					"28"
 		"zpos"					"2"
-		"wide"					"82"
+		"wide"					"102"
 		"tall"					"8"
 		"autoResize"			"0"
 		"pinCorner"				"0"

@@ -13,13 +13,13 @@
 		"pinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"image"			"../hud/mer_panel"
+		"image"			"meridian/mer_panel"
 		"scaleImage"		"1"
-		"teambg_1"		"../hud/mer_panel"
-		"teambg_2"		"../hud/mer_panel_red"
-		"teambg_2_lodef"	"../hud/mer_panel_red"
-		"teambg_3"		"../hud/mer_panel_blue"
-		"teambg_3_lodef"	"../hud/mer_panel_blue"
+		"teambg_1"		"meridian/mer_panel"
+		"teambg_2"		"meridian/mer_panel_red"
+		"teambg_2_lodef"	"meridian/mer_panel_red"
+		"teambg_3"		"meridian/mer_panel_blue"
+		"teambg_3_lodef"	"meridian/mer_panel_blue"
 		
 			
 	}
@@ -36,8 +36,8 @@
 		"pinCorner"		"0"
 		"visible"		"0"
 		"enabled"		"1"
-		"image"			"../hud/mer_panel_blue"
-		"image_lodef"	"../hud/mer_panel_blue"
+		"image"			"meridian/mer_panel_blue"
+		"image_lodef"	"meridian/mer_panel_blue"
 		
 			
 	}
@@ -54,8 +54,8 @@
 		"pinCorner"		"0"
 		"visible"		"0"
 		"enabled"		"1"
-		"image"			"../hud/mer_panel_red"
-		"image_lodef"	"../hud/mer_panel_red"
+		"image"			"meridian/mer_panel_red"
+		"image_lodef"	"meridian/mer_panel_red"
 		
 			
 	}
@@ -161,6 +161,8 @@
 		"scaleImage"	"1"
 	}
 	
+	// Hint shown next to a building you can pick up. The 8-unit shift leaves a gap between it
+	// and the target panel (stock draws them edge to edge).
 	"MoveableSubPanel"
 	{
 		"ControlName"		"EditablePanel"
@@ -168,8 +170,8 @@
 		"xpos"			"0"
 		"ypos"			"0"
 		"zpos"			"-5"
-		"wide"			"32"
-		"tall"			"36"
+		"wide"			"41"
+		"tall"			"40"
 		"visible"		"1"
 		"enabled"		"1"	
 		
@@ -177,11 +179,11 @@
 		{
 			"ControlName"	"CIconPanel"
 			"fieldName"		"MoveableIconBG"
-			"xpos"			"0"
+			"xpos"			"8"
 			"ypos"			"0"
 			"zpos"			"0"
 			"wide"			"10"
-			"tall"			"36"
+			"tall"			"40"
 			"visible"		"1"
 			"enabled"		"1"
 			"icon"			"obj_status_alert_background_tall_nocolor"
@@ -193,7 +195,7 @@
 		{
 			"ControlName"	"CIconPanel"
 			"fieldName"		"MoveableIcon"
-			"xpos"			"5"
+			"xpos"			"13"
 			"ypos"			"7"
 			"zpos"			"11"
 			"wide"			"14"
@@ -208,7 +210,7 @@
 		{
 			"ControlName"	"ImagePanel"
 			"fieldName"		"MoveableSymbolIcon"
-			"xpos"			"16"
+			"xpos"			"24"
 			"ypos"			"-2"
 			"zpos"			"12"
 			"wide"			"16"
@@ -226,7 +228,7 @@
 			"fieldName"		"MoveableKeyLabel"
 			"font"			"TFFontMedium"
 			"font_minmode"	"DefaultVerySmall"
-			"xpos"			"0"
+			"xpos"			"8"
 			"ypos"			"22"
 			"zpos"			"1"
 			"wide"			"640"

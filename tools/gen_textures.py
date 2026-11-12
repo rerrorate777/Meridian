@@ -7,7 +7,7 @@ Re-run after changing the palette below.
 import os
 import struct
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "meridian", "materials", "hud")
+OUT = os.path.join(os.path.dirname(__file__), "..", "meridian", "materials", "vgui", "meridian")
 
 # name -> RGBA, translucent panel fills (neutral / team tinted)
 PANELS = {
@@ -54,7 +54,7 @@ def vtf(width, height, rgba_rows):
 def vmt(texture):
     return (
         '"UnlitGeneric"\n{\n'
-        f'\t"$basetexture"\t"hud/{texture}"\n'
+        f'\t"$basetexture"\t"vgui/meridian/{texture}"\n'
         '\t"$vertexcolor"\t"1"\n'
         '\t"$vertexalpha"\t"1"\n'
         '\t"$translucent"\t"1"\n'
