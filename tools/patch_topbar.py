@@ -120,9 +120,16 @@ def patch_timepanel(src, dst):
     write(dst, t)
 
 
+# The stock notch art has transparent margins, so its visible part is ~91 units wide although the
+# panel is 3.833 x 35 = 134. mer_timer has no margins, so size the panel to the visible width
+# (2.5 x 35 = 87.5, a little inside the portraits) or it runs into the first player portraits (team bases are c-45 / c+47).
+NOTCH_ASPECT = "o2.5"
+
+
 def patch_roundcounter(src, dst):
     t = read(src)
     t = sub1(r'"\.\./hud/comp_round_timer"', '"meridian/mer_timer"', t, "roundcounter.Background.image")
+    t = sub1(r'("wide"\s*)"o3\.833"', r'\1"%s"' % NOTCH_ASPECT, t, "roundcounter.Background.wide")
     write(dst, t)
 
 
