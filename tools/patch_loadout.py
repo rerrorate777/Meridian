@@ -26,6 +26,10 @@ import patch_matchmaking as mm  # noqa: E402
 FILE_RE = re.compile(r"(charinfo|classloadout|loadoutpreset|itemselection|itemslot|crafting|giveaway|importpreview|"
                      r"itemoptions|itemrename|itemdiscard|itempickup|inspection|paintkit|collection|manncotrade|"
                      r"backpack|store|quest|armory|mvmecon)")
+# "NextButton"/"CloseButton" are arrows / an X in most files, so these are listed per file
+EXTRA_BUTTONS = {
+    "econ/itempickuppanel.res": {"NextButton", "PrevButton", "CloseButton", "OpenLoadoutButton", "DiscardButton"},
+}
 PANEL = "12 14 18 255"
 LINE = "46 52 64 255"
 TEXT = "236 240 244 255"
@@ -92,6 +96,9 @@ def main():
             out = patch_charinfo(out)
         out, nb = mm.style_buttons(out)
         styled += nb
+        if rel in EXTRA_BUTTONS:  # text buttons that share a name with image buttons elsewhere
+            out, nb = mm.style_buttons(out, EXTRA_BUTTONS[rel])
+            styled += nb
         if out != t:
             dst = os.path.join(mer, rel)
             os.makedirs(os.path.dirname(dst), exist_ok=True)

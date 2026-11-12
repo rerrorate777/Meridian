@@ -155,6 +155,10 @@
 	{
 		"ControlName"		"CExButton"
 		"fieldName"		"NextButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c195"
 		"ypos"			"350"
 		"zpos"			"1"
@@ -178,6 +182,10 @@
 	{
 		"ControlName"		"CExButton"
 		"fieldName"		"PrevButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c-265"
 		"ypos"			"350"
 		"zpos"			"1"
@@ -202,6 +210,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"CloseButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c50"
 		"ypos"			"420"
 		"zpos"			"6"
@@ -226,6 +238,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"OpenLoadoutButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c-300"
 		"ypos"			"420"
 		"zpos"			"6"
@@ -250,6 +266,10 @@
 	{
 		"ControlName"	"CExImageButton"
 		"fieldName"		"DiscardButton"
+		"border_default"		"MerButtonBorder"
+		"border_armed"		"MerButtonBorderArmed"
+		"paintborder"		"1"
+		"PaintBackgroundType"		"0"
 		"xpos"			"c224"
 		"ypos"			"155"
 		"zpos"			"10"
@@ -269,8 +289,8 @@
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 
-		"defaultBgColor_override" "117 107 94 255"
-		"armedBgColor_override" "145 73 59 255"
+		"defaultBgColor_override" "28 32 40 235"
+		"armedBgColor_override" "224 84 72 200"
 		"depressedBgColor_override" "117 107 94 255"
 			
 		"image_drawcolor"	"235 226 202 255"		

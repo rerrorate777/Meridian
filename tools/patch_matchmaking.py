@@ -43,8 +43,9 @@ COLORS = {
     "defaultFgColor_override": {"46 43 42 255": TEXT},
     "armedFgColor_override": {"200 80 60 255": WHITE, "235 226 202 255": WHITE, "Orange": WHITE},
     # translucent cream / orange fills (the "View Maps" strips, list rows): dark, with a lighter hover
-    "defaultBgColor_override": {"235 226 202 20": "20 24 32 200", "235 226 202 2": "20 24 32 20"},
-    "armedBgColor_override": {"LightOrange": "46 52 64 220"},
+    "defaultBgColor_override": {"235 226 202 20": "20 24 32 200", "235 226 202 2": "20 24 32 20",
+                                "117 107 94 255": "28 32 40 235"},
+    "armedBgColor_override": {"LightOrange": "46 52 64 220", "145 73 59 255": "224 84 72 200"},
     "selectedBGColor_override": {"Orange": "60 68 82 255"},
 }
 
@@ -110,12 +111,13 @@ def match_brace(t, i):
     raise SystemExit("unbalanced braces")
 
 
-def style_buttons(t):
-    """Apply BUTTON_KEYS to every button block named in STYLED_BUTTONS (any nesting depth)."""
+def style_buttons(t, names=None):
+    """Apply BUTTON_KEYS to every button block named in `names` (default STYLED_BUTTONS), at any depth."""
+    names = STYLED_BUTTONS if names is None else names
     out, pos, count = [], 0, 0
     pat = re.compile(r'"ControlName"\s*"(?:CExButton|CExImageButton|CTFButton|Button)"\s*\n\s*"fieldName"\s*"([^"]*)"[^\n]*', re.I)
     for m in pat.finditer(t):
-        if m.group(1) not in STYLED_BUTTONS or m.start() < pos:
+        if m.group(1) not in names or m.start() < pos:
             continue
         open_i = t.rindex("{", 0, m.start())
         close_i = match_brace(t, open_i)
