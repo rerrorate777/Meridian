@@ -189,8 +189,20 @@ def patch_teammenu(src, dst):
             depressedBgColor_override=PRESS)(b))
 
     # text on the cards
-    t = edit_block(t, "TeamMenuAuto", label(c(X_RANDOM), "238", str(CARD_W), "40", "MerTitle", zpos="5"))
-    t = edit_block(t, "TeamMenuSpectate", label(c(X_BLUE), str(CARD_Y + CARD_H + 20), str(CARD_W), "32", "MerBody", zpos="5"))
+    # the title is the button's own text. The key hints ("&3") that the buttons used to show are
+    # static labels below. (A team that is locked by mp_teams_unbalance_limit is NOT disabled in the
+    # UI: the stock menu showed that only through the 3D door, so the cards carry a static hint.)
+    titles = {"teambutton2": "?", "teambutton0": "BLU", "teambutton1": "RED"}
+    for n, text in titles.items():
+        t = edit_block(t, n, lambda b, text=text: place(
+            labelText=text, font="MerHealth", textAlignment="north", textinsety="30", fgcolor=TEXT,
+            defaultFgColor_override=TEXT, armedFgColor_override="255 255 255 255",
+            depressedFgColor_override="255 255 255 255")(b))
+    t = edit_block(t, "teambutton3", lambda b: place(
+        labelText="SPECTATE", font="MerBody", textAlignment="center", fgcolor=TEXT, defaultFgColor_override=TEXT,
+        armedFgColor_override="255 255 255 255", depressedFgColor_override="255 255 255 255")(b))
+    t = edit_block(t, "TeamMenuSpectate", lambda b: place(visible="0")(b))
+    t = edit_block(t, "TeamMenuAuto", lambda b: place(visible="0")(b))
     t = edit_block(t, "BlueCount", label(c(X_BLUE), "238", str(CARD_W), "40", "MerNumberMed", zpos="5"))
     t = edit_block(t, "RedCount", label(c(X_RED), "238", str(CARD_W), "40", "MerNumberMed", zpos="5"))
     t = edit_block(t, "CancelButton", flat_button(cancel=True))
@@ -206,11 +218,17 @@ def patch_teammenu(src, dst):
                                        ("Red", X_RED, CARD_RED, EDGE_RED, "RED")):
         extra += new_panel("MerCard" + name, c(x), str(CARD_Y), str(CARD_W), str(CARD_H), fill, z="1")
         extra += new_panel("MerCard%sEdge" % name, c(x), str(CARD_Y), str(CARD_W), "4", edge, z="2")
-        if title:
-            extra += new_label("MerCard%sTitle" % name, c(x), "150", str(CARD_W), "50", title, "MerHealth")
-            if name != "Random":
-                extra += new_label("MerCard%sPlayers" % name, c(x), "278", str(CARD_W), "20", "players", "MerLabel", DIM)
+        if name != "Random":
+            extra += new_label("MerCard%sPlayers" % name, c(x), "278", str(CARD_W), "20", "players", "MerLabel", DIM)
+    extra += new_label("MerCardRandomLabel", c(X_RANDOM), "238", str(CARD_W), "40", "RANDOM", "MerTitle")
     extra += new_panel("MerCardSpectate", c(X_BLUE), str(CARD_Y + CARD_H + 20), str(CARD_W), "32", CARD, z="1")
+    # key hints (the buttons' own "&N" text was replaced by the card titles)
+    for name, x, y, key_ in (("Random", X_RANDOM, CARD_Y + CARD_H - 22, "1"), ("Blue", X_BLUE, CARD_Y + CARD_H - 22, "3"),
+                             ("Red", X_RED, CARD_Y + CARD_H - 22, "4"), ("Spectate", X_BLUE, CARD_Y + CARD_H + 20 + 14, "2")):
+        extra += new_label("MerKey" + name, c(x + 8), str(y), "20", "16", key_, "MerLabel", DIM, align="west", z="7")
+    # why a card can be locked (the stock menu showed a no-entry sign, which was part of the 3D scene)
+    extra += new_label("MerBalanceHint", c(X_RANDOM), str(CARD_Y + CARD_H + 70), str(CARD_W * 3 + GAP * 2), "20",
+                       "A team is locked while joining it would leave the teams unbalanced.", "MerLabel", DIM)
     t = append(t, extra)
     write(dst, apply_fonts(t))
 

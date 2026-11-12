@@ -77,9 +77,7 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"3"
-		"labelText"		"&3"	[$WIN32]
-		"labelText"		""		[$X360]
-		"textAlignment"	"south-west"
+		"textAlignment"	"north"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"paintborder"	"0"
@@ -87,12 +85,17 @@
 		"team"				"3"		// team blue
 		"associated_model"	"bluedoor"
 		"hover"				"2.0"
-		"font"			"MerLabel"
-		"fgcolor"		"150 160 172 255"
+		"font"			"MerHealth"
+		"fgcolor"		"MerText"
 		"paintbackground"		"1"
 		"defaultBgColor_override"		"0 0 0 0"
 		"armedBgColor_override"		"255 255 255 7"
 		"depressedBgColor_override"		"255 255 255 16"
+		"labelText"		"BLU"
+		"textinsety"		"30"
+		"defaultFgColor_override"		"MerText"
+		"armedFgColor_override"		"255 255 255 255"
+		"depressedFgColor_override"		"255 255 255 255"
 	}
 
 	"teambutton1"
@@ -109,9 +112,7 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"4"
-		"labelText"		"&4"	[$WIN32]
-		"labelText"		""		[$X360]
-		"textAlignment"	"south-west"
+		"textAlignment"	"north"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"paintborder"	"0"
@@ -119,12 +120,17 @@
 		"team"				"2"		// team red
 		"associated_model"	"reddoor"	
 		"hover"				"2.0"
-		"font"			"MerLabel"
-		"fgcolor"		"150 160 172 255"
+		"font"			"MerHealth"
+		"fgcolor"		"MerText"
 		"paintbackground"		"1"
 		"defaultBgColor_override"		"0 0 0 0"
 		"armedBgColor_override"		"255 255 255 7"
 		"depressedBgColor_override"		"255 255 255 16"
+		"labelText"		"RED"
+		"textinsety"		"30"
+		"defaultFgColor_override"		"MerText"
+		"armedFgColor_override"		"255 255 255 255"
+		"depressedFgColor_override"		"255 255 255 255"
 	}
 
 	"teambutton2"
@@ -141,20 +147,23 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"1"
-		"labelText"		"&1"	[$WIN32]
-		"labelText"		""		[$X360]
-		"textAlignment"	"south-west"
+		"textAlignment"	"north"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"paintborder"	"0"
 		"command"		"jointeam auto"
 		"associated_model"	"autodoor"
-		"font"			"MerLabel"
-		"fgcolor"		"150 160 172 255"
+		"font"			"MerHealth"
+		"fgcolor"		"MerText"
 		"paintbackground"		"1"
 		"defaultBgColor_override"		"0 0 0 0"
 		"armedBgColor_override"		"255 255 255 7"
 		"depressedBgColor_override"		"255 255 255 16"
+		"labelText"		"?"
+		"textinsety"		"30"
+		"defaultFgColor_override"		"MerText"
+		"armedFgColor_override"		"255 255 255 255"
+		"depressedFgColor_override"		"255 255 255 255"
 	}
 	
 	"teambutton3"
@@ -171,20 +180,22 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"2"
-		"labelText"		"&2"	[$WIN32]
-		"labelText"		""		[$X360]
-		"textAlignment"	"south-west"
+		"textAlignment"	"center"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"paintborder"	"0"
 		"command"		"jointeam spectate"
 		"associated_model"	"spectate"	
-		"font"			"MerLabel"
-		"fgcolor"		"150 160 172 255"
+		"font"			"MerBody"
+		"fgcolor"		"MerText"
 		"paintbackground"		"1"
 		"defaultBgColor_override"		"0 0 0 0"
 		"armedBgColor_override"		"255 255 255 7"
 		"depressedBgColor_override"		"255 255 255 16"
+		"labelText"		"SPECTATE"
+		"defaultFgColor_override"		"MerText"
+		"armedFgColor_override"		"255 255 255 255"
+		"depressedFgColor_override"		"255 255 255 255"
 	}
 	
 	"CancelButton" [$WIN32] 
@@ -248,45 +259,47 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"TeamMenuAuto"
-		"ypos"			"238"
-		"zpos"			"5"
-		"tall"			"40"
+		"xpos"			"c-280" [$WIN32] 
+		"xpos"			"c-276" [$X360]
+		"ypos"			"55"
+		"zpos"			"1"
+		"wide"			"102" [$WIN32] 
+		"wide"			"94" [$X360]
+		"tall"			"24"
 		"autoResize"	"0"
 		"pinCorner"		"0"
-		"visible"		"1"
+		"visible"		"0"
 		"enabled"		"1"
 		"labelText"		"#TF_Random"
 		"textAlignment"	"center"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"wrap"			"0"
-		"font"			"MerTitle"
-		"fgcolor"		"MerText"
-		"xpos"		"c-260"
-		"wide"		"160"
+		"font"			"MerBody"
+		"fgcolor"		"black"
 	}
 	
 	"TeamMenuSpectate"
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"TeamMenuSpectate"
-		"xpos"			"c-80"
-		"ypos"			"350"
-		"zpos"			"5"
-		"wide"			"160"
-		"tall"			"32"
+		"xpos"			"c-112"
+		"ypos"			"255"
+		"zpos"			"1"
+		"wide"			"44"
+		"tall"			"20"
 		"autoResize"	"0"
 		"pinCorner"		"0"
-		"visible"		"1"
+		"visible"		"0"
 		"enabled"		"1"
 		"labelText"		"#TF_Spectate"
-		"textAlignment"	"center"
+		"textAlignment"	"north"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"wrap"			"0"
-		"font"			"MerBody"
+		"font"			"MerLabel"
 		"font_lodef"	"MenuSmallFont"
-		"fgcolor"		"MerText"
+		"fgcolor"		"white"
 	}
 
 	"MenuBG"
@@ -812,23 +825,6 @@
 		"fillcolor"		"150 160 172 255"
 	}
 
-	"MerCardRandomTitle"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"MerCardRandomTitle"
-		"xpos"			"c-260"
-		"ypos"			"150"
-		"zpos"			"4"
-		"wide"			"160"
-		"tall"			"50"
-		"visible"		"1"
-		"enabled"		"1"
-		"labelText"		"?"
-		"textAlignment"	"center"
-		"font"			"MerHealth"
-		"fgcolor"		"MerText"
-	}
-
 	"MerCardBlue"
 	{
 		"ControlName"	"ImagePanel"
@@ -855,23 +851,6 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"fillcolor"		"76 156 232 255"
-	}
-
-	"MerCardBlueTitle"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"MerCardBlueTitle"
-		"xpos"			"c-80"
-		"ypos"			"150"
-		"zpos"			"4"
-		"wide"			"160"
-		"tall"			"50"
-		"visible"		"1"
-		"enabled"		"1"
-		"labelText"		"BLU"
-		"textAlignment"	"center"
-		"font"			"MerHealth"
-		"fgcolor"		"MerText"
 	}
 
 	"MerCardBluePlayers"
@@ -919,23 +898,6 @@
 		"fillcolor"		"224 84 72 255"
 	}
 
-	"MerCardRedTitle"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"MerCardRedTitle"
-		"xpos"			"c100"
-		"ypos"			"150"
-		"zpos"			"4"
-		"wide"			"160"
-		"tall"			"50"
-		"visible"		"1"
-		"enabled"		"1"
-		"labelText"		"RED"
-		"textAlignment"	"center"
-		"font"			"MerHealth"
-		"fgcolor"		"MerText"
-	}
-
 	"MerCardRedPlayers"
 	{
 		"ControlName"	"CExLabel"
@@ -953,6 +915,23 @@
 		"fgcolor"		"150 160 172 255"
 	}
 
+	"MerCardRandomLabel"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MerCardRandomLabel"
+		"xpos"			"c-260"
+		"ypos"			"238"
+		"zpos"			"4"
+		"wide"			"160"
+		"tall"			"40"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"RANDOM"
+		"textAlignment"	"center"
+		"font"			"MerTitle"
+		"fgcolor"		"MerText"
+	}
+
 	"MerCardSpectate"
 	{
 		"ControlName"	"ImagePanel"
@@ -965,6 +944,91 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"fillcolor"		"12 14 18 225"
+	}
+
+	"MerKeyRandom"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MerKeyRandom"
+		"xpos"			"c-252"
+		"ypos"			"308"
+		"zpos"			"7"
+		"wide"			"20"
+		"tall"			"16"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"1"
+		"textAlignment"	"west"
+		"font"			"MerLabel"
+		"fgcolor"		"150 160 172 255"
+	}
+
+	"MerKeyBlue"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MerKeyBlue"
+		"xpos"			"c-72"
+		"ypos"			"308"
+		"zpos"			"7"
+		"wide"			"20"
+		"tall"			"16"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"3"
+		"textAlignment"	"west"
+		"font"			"MerLabel"
+		"fgcolor"		"150 160 172 255"
+	}
+
+	"MerKeyRed"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MerKeyRed"
+		"xpos"			"c108"
+		"ypos"			"308"
+		"zpos"			"7"
+		"wide"			"20"
+		"tall"			"16"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"4"
+		"textAlignment"	"west"
+		"font"			"MerLabel"
+		"fgcolor"		"150 160 172 255"
+	}
+
+	"MerKeySpectate"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MerKeySpectate"
+		"xpos"			"c-72"
+		"ypos"			"364"
+		"zpos"			"7"
+		"wide"			"20"
+		"tall"			"16"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"2"
+		"textAlignment"	"west"
+		"font"			"MerLabel"
+		"fgcolor"		"150 160 172 255"
+	}
+
+	"MerBalanceHint"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MerBalanceHint"
+		"xpos"			"c-260"
+		"ypos"			"400"
+		"zpos"			"4"
+		"wide"			"520"
+		"tall"			"20"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"A team is locked while joining it would leave the teams unbalanced."
+		"textAlignment"	"center"
+		"font"			"MerLabel"
+		"fgcolor"		"150 160 172 255"
 	}
 }
 
