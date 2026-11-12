@@ -73,12 +73,48 @@ def write(name, w, h, rows):
         f.write(vmt(name))
 
 
+# Top-centre match timer notch (replaces hud/comp_round_timer). The panel is drawn with
+# aspect 3.833:1 ("o3.833" in hudroundcounter.res).
+TIMER = "mer_timer"
+TIMER_W, TIMER_H = 256, 64  # power of two; stretched very slightly to the 3.833:1 panel
+TIMER_BAR = 8  # px: blue | red team bar along the top edge
+TIMER_INSET = 0.07  # bottom edge is this fraction of the width narrower on each side
+TIMER_BODY = (20, 23, 30, 235)
+TIMER_BLUE = (76, 156, 232, 255)  # = mer_blue
+TIMER_RED = (224, 84, 72, 255)  # = mer_red
+SS = 4  # supersampling per axis for the slanted edges
+
+
+def timer_rows():
+    rows = []
+    for y in range(TIMER_H):
+        row = []
+        for x in range(TIMER_W):
+            cov = 0
+            for sy in range(SS):
+                for sx in range(SS):
+                    fy = (y + (sy + 0.5) / SS) / TIMER_H
+                    fx = (x + (sx + 0.5) / SS) / TIMER_W
+                    edge = TIMER_INSET * fy
+                    cov += edge <= fx <= 1 - edge
+            a = cov / (SS * SS)
+            if y < TIMER_BAR:
+                r, g, b, _ = TIMER_BLUE if x < TIMER_W // 2 else TIMER_RED
+                base_a = 255
+            else:
+                r, g, b, base_a = TIMER_BODY
+            row.append((r, g, b, round(base_a * a)))
+        rows.append(row)
+    return rows
+
+
 def main():
     for name, (r, g, b) in SOLIDS.items():
         write(name, 4, 4, [[(r, g, b, 255)] * 4 for _ in range(4)])
     for name, rgba in PANELS.items():
         write(name, 4, 4, [[rgba] * 4 for _ in range(4)])
-    print("wrote", len(SOLIDS) + len(PANELS), "textures to", os.path.normpath(OUT))
+    write(TIMER, TIMER_W, TIMER_H, timer_rows())
+    print("wrote", len(SOLIDS) + len(PANELS) + 1, "textures to", os.path.normpath(OUT))
 
 
 if __name__ == "__main__":

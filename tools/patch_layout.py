@@ -17,7 +17,9 @@ PANEL = "12 14 18 205"
 EDITS = {
     # bottom-right: ammo dock, with item/medic/metal stacked around it
     "HudWeaponAmmo": {"xpos": "r140", "ypos": "r68", "wide": "120", "tall": "48"},
-    "HudItemEffectMeter": {"xpos": "r248", "ypos": "r68", "wide": "100", "tall": "48",
+    # generic meter (Sandman/Wrap Assassin ball, Sandvich, Jarate...): directly above the ammo
+    # dock; the class meters (gen_meters.py) stack to the left of the dock instead
+    "HudItemEffectMeter": {"xpos": "r140", "ypos": "r120", "wide": "120", "tall": "48",
                            "MeterFG": WHITE, "MeterBG": TRACK},
     "HudMedicCharge": {"xpos": "r140", "ypos": "r120", "wide": "120", "tall": "44"},
     "HudDemomanCharge": {"xpos": "r140", "ypos": "r80", "wide": "120", "tall": "6",
