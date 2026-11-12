@@ -60,7 +60,8 @@ ACCENT_ARMED = "236 240 244 255"
 # "default" button - Continue, OK - and the second while pressed, whatever border_default says. They are
 # rounded and lineless, so they are replaced with the same flat accent look.)
 NEW_BORDERS = {"MerButtonBorder": ACCENT, "MerButtonBorderArmed": ACCENT_ARMED,
-               "ButtonKeyFocusBorder": ACCENT, "ButtonDepressedBorder": ACCENT_ARMED}
+               "ButtonKeyFocusBorder": ACCENT, "ButtonDepressedBorder": ACCENT_ARMED,
+               "ButtonBorder": ACCENT}  # (plain border: what a default button falls back to without key focus)
 OUTLINE = "60 68 82 255"
 
 # the tan palette
