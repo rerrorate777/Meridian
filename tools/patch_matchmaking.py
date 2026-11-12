@@ -37,7 +37,8 @@ FONTS = {
 COLORS = {
     "bgcolor_override": {"60 53 46 255": "28 32 40 255", "77 72 68 255": "34 38 46 255",
                          "76 70 66 255": "34 38 46 255", "46 43 42 255": "16 18 24 255",
-                         "42 39 37 255": "14 16 22 255"},
+                         "42 39 37 255": "14 16 22 255",
+                         "251 235 202 255": "28 32 40 255"},  # (loadout's name filter box was cream)
     "fgcolor": {"117 107 94 255": DIM, "235 226 202 255": TEXT, "Orange": TEXT},
     "defaultFgColor_override": {"46 43 42 255": TEXT},
     "armedFgColor_override": {"200 80 60 255": WHITE, "235 226 202 255": WHITE, "Orange": WHITE},
@@ -82,7 +83,7 @@ STYLED_BUTTONS = {
     "LeavePartyButton", "LeaveQueueButton", "AbandonButton", "JoinNowButton", "SmallJoinButton", "WideJoinButton",
     "SelectButton", "ShowLeaderboardsButton", "ShowMatchHistoryButton", "RestoreCasualSearchCriteria",
     "SaveCasualSearchCriteria", "ShowExplanationsButton", "TakeTourButton", "ConfirmButton", "ModeButton",
-    "MannUpNowButton", "BackButton",
+    "MannUpNowButton", "BackButton", "ShowBackpack",
 }
 BUTTON_KEYS = {"border_default": "MerButtonBorder", "border_armed": "MerButtonBorderArmed",
                "paintborder": "1", "PaintBackgroundType": "0"}

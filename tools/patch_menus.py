@@ -42,6 +42,14 @@ BORDERS = {
     "ReplayDefaultBorder": "mer_panel_solid", "ReplayHighlightBorder": "mer_btn_hover",
 }
 
+# Item tiles (loadout, backpack, store): the BackpackItemBorder* family draws brown art, or - for the
+# quality / rarity colours - a white rounded rectangle tinted by the border's "color". Flat textures keep
+# the tint, so item quality colours still work.
+BACKPACK_IMAGES = {
+    "backpack_rect": "mer_btn", "backpack_rect_mouseover": "mer_btn_hover", "backpack_rect_selected": "mer_btn_press",
+    "backpack_rect_color": "mer_solid", "backpack_rect_mouseover_color": "mer_solid",
+}
+
 # 1px outline borders (not images): TanDark became a light grey, which is too bright for an outline
 OUTLINE_BORDERS = ("QuickplayBorder", "SortCategoryBorder")
 
@@ -120,6 +128,15 @@ def patch_scheme(path):
         blk = re.sub(r'("src_corner_(?:height|width)"\s*)"\d+"', r'\1"1"', blk)
         blk = re.sub(r'("draw_corner_(?:height|width)"\s*)"\d+"', r'\1"1"', blk)
         b = b[:m.start()] + blk + b[m.end():]
+    def backpack(m):
+        blk = m.group(0)
+        im = re.search(r'\n\t\t\t"image"\s*"([^"]*)"', blk)
+        if not im or im.group(1) not in BACKPACK_IMAGES:
+            return blk
+        blk = blk.replace(im.group(0), im.group(0).replace('"%s"' % im.group(1), '"meridian/%s"' % BACKPACK_IMAGES[im.group(1)]))
+        blk = re.sub(r'("src_corner_(?:height|width)"\s*)"\d+"', r'\1"1"', blk)
+        return re.sub(r'("draw_corner_(?:height|width)"\s*)"\d+"', r'\1"1"', blk)
+    b = re.sub(r'\n\t\tBackpack[A-Za-z0-9_]*\s*\n\t\t\{.*?\n\t\t\}', backpack, b, flags=re.S)
     for name in OUTLINE_BORDERS:
         m = re.search(r'\n\t\t%s\s*\n\t\t\{.*?\n\t\t\}' % re.escape(name), b, re.S)
         if not m:
