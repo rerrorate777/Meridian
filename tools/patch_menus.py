@@ -56,12 +56,14 @@ OUTLINE_BORDERS = ("QuickplayBorder", "SortCategoryBorder")
 # new borders for the footer buttons: a 2px accent line on the left (brighter when armed)
 ACCENT = "150 160 172 255"
 ACCENT_ARMED = "236 240 244 255"
-# (ButtonKeyFocusBorder / ButtonDepressedBorder are stock borders: the vgui button uses the first for the
-# "default" button - Continue, OK - and the second while pressed, whatever border_default says. They are
-# rounded and lineless, so they are replaced with the same flat accent look.)
+# (ButtonKeyFocusBorder / ButtonDepressedBorder are stock borders: the vgui button uses the first when it has
+# key focus - the default button: Continue, OK - and the second while pressed, whatever border_default says.
+# They are rounded and lineless, so they are replaced: key focus with the accent look, pressed with a plain
+# square one - the class select's tips panel also draws the pressed border, and must not get a line.)
 NEW_BORDERS = {"MerButtonBorder": ACCENT, "MerButtonBorderArmed": ACCENT_ARMED,
-               "ButtonKeyFocusBorder": ACCENT, "ButtonDepressedBorder": ACCENT_ARMED,
-               "ButtonBorder": ACCENT}  # (plain border: what a default button falls back to without key focus)
+               "ButtonKeyFocusBorder": ACCENT, "ButtonDepressedBorder": None,
+               "ButtonBorder": None}  # None: square, no line. The plain border: what a button without its own border
+# (the class cards, the MOTD Continue when it has no key focus) draws, so it must not carry the accent line.
 OUTLINE = "60 68 82 255"
 
 # the tan palette
@@ -154,6 +156,11 @@ def patch_scheme(path):
             raise SystemExit("scheme border not found: " + name)
         b = b[:m.start()] + m.group(0).replace('"TanDark"', '"%s"' % OUTLINE) + b[m.end():]
     for name, color in NEW_BORDERS.items():
+        if color is None:
+            blk = '\n\t\t%s\n\t\t{\n\t\t\t"inset" "0 0 0 0"\n\t\t\t"backgroundtype" "0"\n\t\t}\n' % name
+            m = re.search(r'\n\t\t%s\s*\n\t\t\{.*?\n\t\t\}\n' % name, b, re.S)
+            b = b[:m.start()] + blk + b[m.end():]
+            continue
         blk = ('\n\t\t%s\n\t\t{\n\t\t\t"inset" "0 0 0 0"\n\t\t\t"backgroundtype" "0"\n\t\t\tLeft\n\t\t\t{\n'
                '\t\t\t\t"1"\n\t\t\t\t{\n\t\t\t\t\t"color" "%s"\n\t\t\t\t\t"offset" "0 0"\n\t\t\t\t}\n'
                '\t\t\t\t"2"\n\t\t\t\t{\n\t\t\t\t\t"color" "%s"\n\t\t\t\t\t"offset" "0 0"\n\t\t\t\t}\n'

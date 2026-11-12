@@ -189,6 +189,7 @@ def patch_teammenu(src, dst):
     for n, (x, y, w, h) in cards.items():
         t = edit_block(t, n, lambda b, x=x, y=y, w=w, h=h: place(
             xpos=c(x), ypos=str(y), wide=str(w), tall=str(h), font="MerLabel", fgcolor=DIM, zpos="6",
+            Default="0",  # the default button draws the key-focus border (an accent line) - not wanted on a card
             paintbackground="1", defaultBgColor_override="0 0 0 0", armedBgColor_override=HOVER,
             depressedBgColor_override=PRESS)(b))
 
@@ -251,6 +252,7 @@ def patch_classselection(src, dst):
     # click targets: hover/press highlight and Meridian key-hint colours
     for n in CLASS_BUTTONS:
         t = edit_block(t, n, lambda b: place(
+            Default="0",  # the default button draws the key-focus border (an accent line) - not wanted on a card
             paintbackground="1", defaultBgColor_override="0 0 0 0", armedBgColor_override=HOVER,
             depressedBgColor_override=PRESS, fgcolor=DIM, defaultFgColor_override=DIM,
             armedFgColor_override=TEXT, depressedFgColor_override=TEXT)(b))

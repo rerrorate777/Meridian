@@ -85,7 +85,7 @@
 		"labelText"			""
 		"textAlignment"		"south-west"
 		"Command"			"select 12"
-		"Default"			"1"
+		"Default"			"0"
 		"font"				"MerLabel"
 		"scaleImage"		"1"
 		

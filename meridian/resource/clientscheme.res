@@ -3618,19 +3618,6 @@ Scheme
 		{
 			"inset" "0 0 0 0"
 			"backgroundtype" "0"
-			Left
-			{
-				"1"
-				{
-					"color" "150 160 172 255"
-					"offset" "0 0"
-				}
-				"2"
-				{
-					"color" "150 160 172 255"
-					"offset" "0 0"
-				}
-			}
 		}
 
 		// this is the border used for default buttons (the button that gets pressed when you hit enter)
@@ -3657,19 +3644,6 @@ Scheme
 		{
 			"inset" "0 0 0 0"
 			"backgroundtype" "0"
-			Left
-			{
-				"1"
-				{
-					"color" "236 240 244 255"
-					"offset" "0 0"
-				}
-				"2"
-				{
-					"color" "236 240 244 255"
-					"offset" "0 0"
-				}
-			}
 		}
 
 		ComboBoxBorder
