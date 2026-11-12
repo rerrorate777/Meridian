@@ -2001,8 +2001,8 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldname"		"ReportPlayerButton"
-		"xpos"			"c-47"
-		"ypos"			"437"
+		"xpos"			"10"
+		"ypos"			"289"
 		"zpos"			"11"
 		"wide"			"30"
 		"tall"			"25"
@@ -2035,9 +2035,12 @@
 			"default"		"1"
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
-			"RoundedCorners"	"5"
 			
 			"paintbackground"	"1"
+			"paintborder"	"1"
+			"PaintBackgroundType"	"0"
+			"border_default"	"MerButtonBorder"
+			"border_armed"	"MerButtonBorderArmed"
 			
 			"defaultFgColor_override" "236 240 244 255"
 			"armedFgColor_override" "255 255 255 255"
@@ -2052,8 +2055,8 @@
 			{
 				"ControlName"	"ImagePanel"
 				"fieldName"		"SubImage"
-				"xpos"			"5"
-				"ypos"			"cs-0.5"
+				"xpos"			"7"
+				"ypos"			"5"
 				"zpos"			"1"
 				"wide"			"15"
 				"tall"			"15"
@@ -2070,10 +2073,10 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldname"		"CallVoteButton"
-		"xpos"			"c-24"
-		"ypos"			"437"
+		"xpos"			"10"
+		"ypos"			"320"
 		"zpos"			"12"
-		"wide"			"25"
+		"wide"			"30"
 		"tall"			"25"
 		"visible"		"1"
 
@@ -2105,8 +2108,11 @@
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
 			
-			"border_default"	"MainMenuSubButtonBorder"
 			"paintbackground"	"1"
+			"paintborder"	"1"
+			"PaintBackgroundType"	"0"
+			"border_default"	"MerButtonBorder"
+			"border_armed"	"MerButtonBorderArmed"
 			
 			"defaultFgColor_override" "236 240 244 255"
 			"armedFgColor_override" "255 255 255 255"
@@ -2120,8 +2126,8 @@
 			{
 				"ControlName"	"ImagePanel"
 				"fieldName"		"SubImage"
-				"xpos"			"cs-0.5"
-				"ypos"			"cs-0.5"
+				"xpos"			"7"
+				"ypos"			"5"
 				"zpos"			"1"
 				"wide"			"15"
 				"tall"			"15"
@@ -2137,10 +2143,10 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldname"		"MutePlayersButton"
-		"xpos"			"c-1"
-		"ypos"			"437"
+		"xpos"			"10"
+		"ypos"			"351"
 		"zpos"			"12"
-		"wide"			"25"
+		"wide"			"30"
 		"tall"			"25"
 		"visible"		"1"
 
@@ -2172,8 +2178,11 @@
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
 			
-			"border_default"	"MainMenuSubButtonBorder"
 			"paintbackground"	"1"
+			"paintborder"	"1"
+			"PaintBackgroundType"	"0"
+			"border_default"	"MerButtonBorder"
+			"border_armed"	"MerButtonBorderArmed"
 			
 			"defaultFgColor_override" "236 240 244 255"
 			"armedFgColor_override" "255 255 255 255"
@@ -2187,8 +2196,8 @@
 			{
 				"ControlName"	"ImagePanel"
 				"fieldName"		"SubImage"
-				"xpos"			"cs-0.5"
-				"ypos"			"cs-0.5"
+				"xpos"			"7"
+				"ypos"			"5"
 				"zpos"			"1"
 				"wide"			"15"
 				"tall"			"15"
@@ -2205,10 +2214,10 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldname"		"RequestCoachButton"
-		"xpos"			"c22"
-		"ypos"			"437"
+		"xpos"			"10"
+		"ypos"			"382"
 		"zpos"			"12"
-		"wide"			"25"
+		"wide"			"30"
 		"tall"			"25"
 		"visible"		"1"
 
@@ -2239,9 +2248,12 @@
 			"default"		"1"
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
-			"RoundedCorners"	"10"
 			
 			"paintbackground"	"1"
+			"paintborder"	"1"
+			"PaintBackgroundType"	"0"
+			"border_default"	"MerButtonBorder"
+			"border_armed"	"MerButtonBorderArmed"
 			
 			"defaultFgColor_override" "236 240 244 255"
 			"armedFgColor_override" "255 255 255 255"
@@ -2255,8 +2267,8 @@
 			{
 				"ControlName"	"ImagePanel"
 				"fieldName"		"SubImage"
-				"xpos"			"rs1-5"
-				"ypos"			"cs-0.5"
+				"xpos"			"7"
+				"ypos"			"5"
 				"zpos"			"1"
 				"wide"			"15"
 				"tall"			"15"

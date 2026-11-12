@@ -237,6 +237,25 @@ def patch_mainmenu(src, dst):
     for n in ("CharacterSetupButton", "GeneralStoreButton"):
         t = edit_block(t, n, style)
 
+    # In-game only: Report Player / Call Vote / Mute / Request Coach. Stock puts them at c-47..c+47, on top
+    # of the first gear buttons; stack them down the left edge, above the footer, in the same flat style.
+    def side(b, y):
+        for k, v in (("xpos", "10"), ("ypos", str(y)), ("wide", "30"), ("tall", "25")):
+            b = setk(b, k, v)
+        m = re.search(r'\n\t\t"SubButton"\s*\n\t\t\{.*?\n\t\t\}', b, re.S)
+        if not m:
+            raise SystemExit("side button: no SubButton")
+        sb = re.sub(r'\n\t\t\t"(?:RoundedCorners|paintborder|PaintBackgroundType|border_default|border_armed)"[^\n]*', "", m.group(0))
+        sb = sub1(r'(\n\t\t\t"paintbackground"[^\n]*)', lambda mm: mm.group(1) + "".join(
+            '\n\t\t\t"%s"\t"%s"' % kv for kv in (("paintborder", "1"), ("PaintBackgroundType", "0"),
+                                                  ("border_default", "MerButtonBorder"),
+                                                  ("border_armed", "MerButtonBorderArmed"))), sb, "side.paintbackground")
+        sb = sub1(r'(\n\t\t\t\t"xpos"\s*)"[^"]*"', r'\g<1>"7"', sb, "side.SubImage.xpos")
+        sb = sub1(r'(\n\t\t\t\t"ypos"\s*)"[^"]*"', r'\g<1>"5"', sb, "side.SubImage.ypos")
+        return b[:m.start()] + sb + b[m.end():]
+    for i, n in enumerate(("ReportPlayerButton", "CallVoteButton", "MutePlayersButton", "RequestCoachButton")):
+        t = edit_block(t, n, lambda b, y=289 + 31 * i: side(b, y))
+
     # The "Featured" store item panel is gone; the friends list moves up into its place
     t = edit_block(t, "EventPromo", hide_panel)
     t = edit_block(t, "FriendsContainer", lambda b: setk(setk(b, "ypos", "160"), "tall", "250"))
