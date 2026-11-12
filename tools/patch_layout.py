@@ -28,7 +28,8 @@ EDITS = {
                      "MeterFG": WHITE, "MeterBG": TRACK},
     "HudFlameRocketCharge": {"xpos": "r140", "ypos": "r80", "wide": "120", "tall": "6",
                              "MeterFG": WHITE, "MeterBG": TRACK},
-    "HudDemomanPipes": {"xpos": "r260", "ypos": "r69"},
+    # sticky count + shield charge: a 100x48 card in the item-meter row (resource/ui/huddemomanpipes.res)
+    "HudDemomanPipes": {"xpos": "r248", "ypos": "r68", "wide": "100", "tall": "48"},
     "CHudAccountPanel": {"xpos": "r140", "ypos": "r200", "wide": "120", "tall": "200"},
     # bottom-left: health dock, floating +health, spy disguise, chat above
     "CHealthAccountPanel": {"xpos": "20", "ypos": "r200", "wide": "148", "tall": "200"},
